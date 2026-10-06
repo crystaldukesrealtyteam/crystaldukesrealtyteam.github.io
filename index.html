@@ -12,6 +12,7 @@
   <title>Crystal Dukes | REALTOR® | Guiding You Home</title>
 
   <style>
+
     :root {
       --black: #0b0b0b;
       --deep-black: #111111;
@@ -57,6 +58,7 @@
       width: min(1180px, 92%);
       margin: 0 auto;
     }
+
 
     /* =========================
        HEADER
@@ -115,6 +117,7 @@
       background: var(--gold);
       color: var(--black) !important;
     }
+
 
     /* =========================
        BUTTONS
@@ -181,6 +184,7 @@
     .btn-white:hover {
       background: var(--gold);
     }
+
 
     /* =========================
        HERO
@@ -285,6 +289,7 @@
       filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.45));
     }
 
+
     /* =========================
        GUIDING YOU HOME
     ========================= */
@@ -341,6 +346,7 @@
       margin: 28px 0;
     }
 
+
     /* =========================
        FEATURED PROPERTY
     ========================= */
@@ -384,7 +390,7 @@
           rgba(0,0,0,0.05),
           rgba(0,0,0,0.05)
         ),
-        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85")
+        url("7550-highway-85.jpg")
         center / cover;
     }
 
@@ -453,6 +459,167 @@
       margin: 22px 0 5px;
     }
 
+
+    /* =========================
+       FIND YOUR NEXT HOME
+    ========================= */
+
+    .listing-section {
+      margin-top: 95px;
+    }
+
+    .listing-section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 35px;
+    }
+
+    .listing-section-heading h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 4vw, 52px);
+      line-height: 1.05;
+      font-weight: 400;
+      margin-top: 8px;
+    }
+
+    .listing-section-heading p {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .listing-view-all {
+      color: var(--black);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      white-space: nowrap;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 5px;
+    }
+
+    .listing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .listing-card {
+      background: var(--white);
+      border: 1px solid #dedede;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .listing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.10);
+    }
+
+    .listing-image {
+      min-height: 285px;
+      position: relative;
+      overflow: hidden;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .listing-image.prestwick {
+      background-image: url("624-prestwick.jpg");
+    }
+
+    .listing-image.houston {
+      background-image: url("710-houston.jpg");
+    }
+
+    .listing-image.seventh {
+      background-image: url("106-w-7th.jpg");
+    }
+
+    .listing-image.burdeshaw {
+      background-image: url("1378-e-burdeshaw.jpg");
+    }
+
+    .listing-status {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 2;
+      background: var(--white);
+      color: var(--black);
+      padding: 8px 13px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-left: 4px solid var(--red);
+    }
+
+    .listing-content {
+      padding: 28px 30px 30px;
+    }
+
+    .listing-price {
+      color: var(--black);
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .listing-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 5px;
+    }
+
+    .listing-location {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .listing-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 17px;
+      padding: 16px 0;
+      border-top: 1px solid #e2e2e2;
+      border-bottom: 1px solid #e2e2e2;
+      color: #555;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .listing-meta strong {
+      color: var(--black);
+      font-size: 16px;
+      margin-right: 3px;
+    }
+
+    .listing-link {
+      display: inline-block;
+      margin-top: 22px;
+      color: #111;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 5px;
+    }
+
+    .listing-link:hover {
+      color: var(--gold);
+    }
+
+
     /* =========================
        HOW I CAN HELP
     ========================= */
@@ -509,6 +676,7 @@
       font-size: 15px;
     }
 
+
     /* =========================
        WHERE I SERVE
     ========================= */
@@ -549,6 +717,7 @@
       font-size: 27px;
       font-weight: 400;
     }
+
 
     /* =========================
        ABOUT
@@ -598,6 +767,7 @@
       margin-bottom: 18px;
     }
 
+
     /* =========================
        ZILLOW
     ========================= */
@@ -634,6 +804,7 @@
     .zillow .btn-dark:hover {
       background: var(--white);
     }
+
 
     /* =========================
        LET'S TALK
@@ -748,6 +919,7 @@
       margin-top: 5px;
     }
 
+
     /* =========================
        FOOTER
     ========================= */
@@ -806,11 +978,13 @@
       color: #777;
     }
 
+
     /* =========================
        MOBILE
     ========================= */
 
     @media (max-width: 900px) {
+
       .nav {
         min-height: 75px;
         padding: 10px 20px;
@@ -887,6 +1061,20 @@
         min-height: 350px;
       }
 
+      .listing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .listing-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .listing-image {
+        min-height: 250px;
+      }
+
       .service-grid,
       .area-grid {
         grid-template-columns: 1fr;
@@ -937,9 +1125,12 @@
         flex-direction: column;
         text-align: center;
       }
+
     }
 
+
     @media (max-width: 550px) {
+
       .container {
         width: 90%;
       }
@@ -983,6 +1174,18 @@
         gap: 20px;
       }
 
+      .listing-content {
+        padding: 25px;
+      }
+
+      .listing-image {
+        min-height: 230px;
+      }
+
+      .listing-meta {
+        gap: 12px;
+      }
+
       .contact-box {
         padding: 30px 20px;
       }
@@ -990,48 +1193,84 @@
       .footer-logo {
         width: 230px;
       }
+
     }
+
   </style>
 </head>
 
+
 <body>
+
 
   <!-- =========================
        HEADER
   ========================== -->
 
   <header>
+
     <div class="container nav">
 
       <a href="#home" aria-label="Crystal Dukes Home">
+
         <img
           src="main-logo-dark.png"
           alt="Crystal Dukes REALTOR"
           class="logo"
         >
+
       </a>
 
+
       <nav>
+
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#services">How I Can Help</a></li>
-          <li><a href="#areas">Where I Serve</a></li>
-          <li><a href="#featured">Featured</a></li>
+
           <li>
-            <a href="#contact" class="nav-contact">Let's Talk</a>
+            <a href="#home">Home</a>
           </li>
+
+          <li>
+            <a href="#about">About Me</a>
+          </li>
+
+          <li>
+            <a href="#services">How I Can Help</a>
+          </li>
+
+          <li>
+            <a href="#areas">Where I Serve</a>
+          </li>
+
+          <li>
+            <a href="#featured">Featured</a>
+          </li>
+
+          <li>
+            <a href="#listings">Listings</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="nav-contact">
+              Let's Talk
+            </a>
+          </li>
+
         </ul>
+
       </nav>
 
     </div>
+
   </header>
 
-  <!-- =========================
-       HERO
-  ========================== -->
 
   <main id="home">
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <section class="hero">
 
@@ -1083,6 +1322,7 @@
 
         </div>
 
+
         <div class="hero-photo-wrap">
 
           <img
@@ -1097,6 +1337,7 @@
       </div>
 
     </section>
+
 
     <!-- =========================
          GUIDING YOU HOME
@@ -1126,6 +1367,7 @@
 
         </div>
 
+
         <div>
 
           <div class="gold-line"></div>
@@ -1138,9 +1380,11 @@
           </p>
 
           <div class="buttons">
+
             <a href="#about" class="btn btn-dark">
               LEARN MORE ABOUT ME →
             </a>
+
           </div>
 
         </div>
@@ -1148,6 +1392,7 @@
       </div>
 
     </section>
+
 
     <!-- =========================
          FEATURED PROPERTY
@@ -1173,6 +1418,9 @@
 
         </div>
 
+
+        <!-- 7550 HIGHWAY 85 -->
+
         <div class="property-card">
 
           <div class="property-image"></div>
@@ -1180,19 +1428,19 @@
           <div class="property-content">
 
             <div class="property-tag">
-              For Sale
+              Featured • For Sale
             </div>
 
             <h3>
-              624 Prestwick Drive
+              7550 Highway 85
             </h3>
 
             <div class="property-location">
-              Dothan, Alabama 36305
+              Daleville, Alabama 36322
             </div>
 
             <div class="property-price">
-              $619,000
+              $694,000
             </div>
 
             <div class="property-stats">
@@ -1208,22 +1456,21 @@
               </div>
 
               <div class="property-stat">
-                <strong>3,005</strong>
+                <strong>4,702</strong>
                 <span>Sq Ft</span>
               </div>
 
               <div class="property-stat">
-                <strong>0.80</strong>
+                <strong>3</strong>
                 <span>Acres</span>
               </div>
 
             </div>
 
             <p class="property-details">
-              Located on Hole #4 of Magnolia Golf Course, this beautiful
-              home features a heated and cooled screened patio, gas grill,
-              hardwood floors, granite countertops, gas appliances,
-              dual tankless water heaters, and a 2-car attached garage.
+              A beautiful home on 3 acres featuring spacious living areas,
+              a large open yard, comfortable bedrooms, and plenty of room
+              to enjoy both indoor and outdoor living.
             </p>
 
             <div class="buttons">
@@ -1234,7 +1481,7 @@
                 rel="noopener"
                 class="btn btn-gold"
               >
-                VIEW ALL LISTINGS →
+                VIEW PROPERTY →
               </a>
 
             </div>
@@ -1243,9 +1490,294 @@
 
         </div>
 
+
+        <!-- =========================
+             FIND YOUR NEXT HOME
+        ========================== -->
+
+        <div class="listing-section" id="listings">
+
+          <div class="listing-section-heading">
+
+            <div>
+
+              <p>
+                Currently Available
+              </p>
+
+              <h2>
+                Find Your Next Home.
+              </h2>
+
+            </div>
+
+            <a
+              href="https://www.zillow.com/profile/crystalsellsalabama"
+              target="_blank"
+              rel="noopener"
+              class="listing-view-all"
+            >
+              VIEW ALL LISTINGS →
+            </a>
+
+          </div>
+
+
+          <div class="listing-grid">
+
+
+            <!-- =========================
+                 624 PRESTWICK
+            ========================== -->
+
+            <article class="listing-card">
+
+              <div class="listing-image prestwick">
+
+                <span class="listing-status">
+                  For Sale
+                </span>
+
+              </div>
+
+
+              <div class="listing-content">
+
+                <div class="listing-price">
+                  $619,000
+                </div>
+
+                <h3>
+                  624 Prestwick Dr
+                </h3>
+
+                <div class="listing-location">
+                  Dothan, AL 36305
+                </div>
+
+                <div class="listing-meta">
+
+                  <span>
+                    <strong>4</strong> Beds
+                  </span>
+
+                  <span>
+                    <strong>4</strong> Baths
+                  </span>
+
+                  <span>
+                    <strong>3,005</strong> Sq Ft
+                  </span>
+
+                  <span>
+                    <strong>0.80</strong> Acres
+                  </span>
+
+                </div>
+
+
+                <a
+                  href="https://www.zillow.com/profile/crystalsellsalabama"
+                  target="_blank"
+                  rel="noopener"
+                  class="listing-link"
+                >
+                  VIEW PROPERTY →
+                </a>
+
+              </div>
+
+            </article>
+
+
+            <!-- =========================
+                 710 HOUSTON
+            ========================== -->
+
+            <article class="listing-card">
+
+              <div class="listing-image houston">
+
+                <span class="listing-status">
+                  For Sale
+                </span>
+
+              </div>
+
+
+              <div class="listing-content">
+
+                <div class="listing-price">
+                  $249,900
+                </div>
+
+                <h3>
+                  710 Houston St
+                </h3>
+
+                <div class="listing-location">
+                  Cottonwood, AL 36320
+                </div>
+
+                <div class="listing-meta">
+
+                  <span>
+                    <strong>3</strong> Beds
+                  </span>
+
+                  <span>
+                    <strong>2</strong> Baths
+                  </span>
+
+                  <span>
+                    <strong>2,076</strong> Sq Ft
+                  </span>
+
+                </div>
+
+
+                <a
+                  href="https://www.zillow.com/profile/crystalsellsalabama"
+                  target="_blank"
+                  rel="noopener"
+                  class="listing-link"
+                >
+                  VIEW PROPERTY →
+                </a>
+
+              </div>
+
+            </article>
+
+
+            <!-- =========================
+                 106 W 7TH
+            ========================== -->
+
+            <article class="listing-card">
+
+              <div class="listing-image seventh">
+
+                <span class="listing-status">
+                  For Sale
+                </span>
+
+              </div>
+
+
+              <div class="listing-content">
+
+                <div class="listing-price">
+                  $239,900
+                </div>
+
+                <h3>
+                  106 W 7th St
+                </h3>
+
+                <div class="listing-location">
+                  Donalsonville, GA 39845
+                </div>
+
+                <div class="listing-meta">
+
+                  <span>
+                    <strong>4</strong> Beds
+                  </span>
+
+                  <span>
+                    <strong>3</strong> Baths
+                  </span>
+
+                  <span>
+                    <strong>3,720</strong> Sq Ft
+                  </span>
+
+                </div>
+
+
+                <a
+                  href="https://www.zillow.com/profile/crystalsellsalabama"
+                  target="_blank"
+                  rel="noopener"
+                  class="listing-link"
+                >
+                  VIEW PROPERTY →
+                </a>
+
+              </div>
+
+            </article>
+
+
+            <!-- =========================
+                 1378 E BURDESHAW
+            ========================== -->
+
+            <article class="listing-card">
+
+              <div class="listing-image burdeshaw">
+
+                <span class="listing-status">
+                  For Sale
+                </span>
+
+              </div>
+
+
+              <div class="listing-content">
+
+                <div class="listing-price">
+                  $90,000
+                </div>
+
+                <h3>
+                  1378 E Burdeshaw St
+                </h3>
+
+                <div class="listing-location">
+                  Dothan, AL 36303
+                </div>
+
+                <div class="listing-meta">
+
+                  <span>
+                    <strong>5</strong> Beds
+                  </span>
+
+                  <span>
+                    <strong>1</strong> Bath
+                  </span>
+
+                  <span>
+                    <strong>1,408</strong> Sq Ft
+                  </span>
+
+                </div>
+
+
+                <a
+                  href="https://www.zillow.com/profile/crystalsellsalabama"
+                  target="_blank"
+                  rel="noopener"
+                  class="listing-link"
+                >
+                  VIEW PROPERTY →
+                </a>
+
+              </div>
+
+            </article>
+
+
+          </div>
+
+        </div>
+
       </div>
 
     </section>
+
 
     <!-- =========================
          HOW I CAN HELP
@@ -1262,7 +1794,9 @@
           </div>
 
           <h2>
-            Real Estate, My Way.
+            Real Estate,
+            <br>
+            My Way.
           </h2>
 
           <p>
@@ -1272,7 +1806,9 @@
 
         </div>
 
+
         <div class="service-grid">
+
 
           <article class="service-card">
 
@@ -1292,6 +1828,7 @@
 
           </article>
 
+
           <article class="service-card">
 
             <div class="service-number">
@@ -1309,6 +1846,7 @@
             </p>
 
           </article>
+
 
           <article class="service-card">
 
@@ -1328,11 +1866,13 @@
 
           </article>
 
+
         </div>
 
       </div>
 
     </section>
+
 
     <!-- =========================
          WHERE I SERVE
@@ -1361,18 +1901,25 @@
 
         </div>
 
+
         <div class="area-grid">
 
           <div class="area-card">
-            <h3>Southeast Alabama</h3>
+            <h3>
+              Southeast Alabama
+            </h3>
           </div>
 
           <div class="area-card">
-            <h3>Northwest Florida</h3>
+            <h3>
+              Northwest Florida
+            </h3>
           </div>
 
           <div class="area-card">
-            <h3>Southwest Georgia</h3>
+            <h3>
+              Southwest Georgia
+            </h3>
           </div>
 
         </div>
@@ -1380,6 +1927,7 @@
       </div>
 
     </section>
+
 
     <!-- =========================
          ABOUT ME
@@ -1398,6 +1946,7 @@
           >
 
         </div>
+
 
         <div class="about-content">
 
@@ -1432,9 +1981,13 @@
             confidence.
           </p>
 
+
           <div class="buttons">
 
-            <a href="#contact" class="btn btn-dark">
+            <a
+              href="#contact"
+              class="btn btn-dark"
+            >
               LET'S TALK →
             </a>
 
@@ -1445,6 +1998,7 @@
       </div>
 
     </section>
+
 
     <!-- =========================
          ZILLOW
@@ -1466,6 +2020,7 @@
           </p>
 
         </div>
+
 
         <div class="buttons">
 
@@ -1493,6 +2048,7 @@
 
     </section>
 
+
     <!-- =========================
          LET'S TALK
     ========================== -->
@@ -1500,6 +2056,7 @@
     <section class="contact" id="contact">
 
       <div class="container contact-grid">
+
 
         <div>
 
@@ -1517,7 +2074,9 @@
             questions, I'd love to hear from you.
           </p>
 
+
           <div class="contact-details">
+
 
             <div class="contact-item">
 
@@ -1531,6 +2090,7 @@
 
             </div>
 
+
             <div class="contact-item">
 
               <small>
@@ -1543,9 +2103,11 @@
 
             </div>
 
+
           </div>
 
         </div>
+
 
         <div class="contact-box">
 
@@ -1558,10 +2120,10 @@
             best for you.
           </p>
 
+
           <!--
-            CALENDLY:
             Replace YOUR-CALENDLY-LINK-HERE with Crystal's actual
-            Calendly URL when you have it.
+            Calendly URL when available.
           -->
 
           <a
@@ -1573,11 +2135,14 @@
             BOOK AN APPOINTMENT →
           </a>
 
+
           <div class="gold-line"></div>
+
 
           <h3>
             Or send me a message.
           </h3>
+
 
           <form
             class="contact-form"
@@ -1632,7 +2197,9 @@
 
     </section>
 
+
   </main>
+
 
   <!-- =========================
        FOOTER
@@ -1643,6 +2210,7 @@
     <div class="container">
 
       <div class="footer-grid">
+
 
         <div>
 
@@ -1660,6 +2228,7 @@
 
         </div>
 
+
         <div>
 
           <h4>
@@ -1669,32 +2238,51 @@
           <ul class="footer-links">
 
             <li>
-              <a href="#home">Home</a>
+              <a href="#home">
+                Home
+              </a>
             </li>
 
             <li>
-              <a href="#about">About Me</a>
+              <a href="#about">
+                About Me
+              </a>
             </li>
 
             <li>
-              <a href="#services">How I Can Help</a>
+              <a href="#services">
+                How I Can Help
+              </a>
             </li>
 
             <li>
-              <a href="#areas">Where I Serve</a>
+              <a href="#areas">
+                Where I Serve
+              </a>
             </li>
 
             <li>
-              <a href="#featured">Featured Property</a>
+              <a href="#featured">
+                Featured Property
+              </a>
             </li>
 
             <li>
-              <a href="#contact">Let's Talk</a>
+              <a href="#listings">
+                Listings
+              </a>
+            </li>
+
+            <li>
+              <a href="#contact">
+                Let's Talk
+              </a>
             </li>
 
           </ul>
 
         </div>
+
 
         <div>
 
@@ -1740,7 +2328,9 @@
 
         </div>
 
+
       </div>
+
 
       <div class="footer-bottom">
 
@@ -1757,6 +2347,7 @@
     </div>
 
   </footer>
+
 
 </body>
 </html>
