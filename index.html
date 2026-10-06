@@ -4,21 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Crystal Dukes Realty Team | Southeast Alabama Real Estate</title>
+  <title>Crystal Dukes | REALTOR® | Guiding You Home</title>
 
   <meta name="description"
-        content="Crystal Dukes Realty Team - Helping buyers and sellers throughout Southeast Alabama, Northwest Florida, and Southwest Georgia.">
+    content="Crystal Dukes REALTOR® serving Southeast Alabama, Northwest Florida, and Southwest Georgia.">
 
   <style>
+
     :root {
-      --red: #c8102e;
-      --dark-red: #9f0d24;
       --black: #111111;
-      --dark: #1c1c1c;
-      --gray: #666666;
-      --light-gray: #f5f5f5;
+      --black-soft: #1b1b1b;
+      --gold: #c89b3c;
+      --gold-light: #e2bd68;
       --white: #ffffff;
-      --gold: #c9a227;
+      --cream: #f7f5ef;
+      --gray: #6d6d6d;
+      --light-gray: #eeeeee;
+      --red: #a9152d;
     }
 
     * {
@@ -38,14 +40,14 @@
       line-height: 1.6;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
     img {
       max-width: 100%;
       display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     /* =========================
@@ -53,157 +55,150 @@
     ========================= */
 
     header {
+      background: white;
+      border-bottom: 1px solid #e5e5e5;
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: white;
-      border-bottom: 1px solid #eeeeee;
     }
 
     .nav {
-      max-width: 1250px;
+      max-width: 1350px;
       margin: auto;
-      padding: 15px 25px;
+      min-height: 95px;
+      padding: 10px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 35px;
     }
 
-    .logo {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 27px;
-      font-weight: bold;
-      line-height: 1;
-    }
-
-    .logo span {
-      display: block;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 10px;
-      letter-spacing: 4px;
-      margin-top: 5px;
-      text-align: center;
-      font-weight: normal;
-    }
-
-    .logo-mark {
-      color: var(--red);
+    .main-logo {
+      width: 210px;
+      height: auto;
     }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 26px;
     }
 
     nav a {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
+      letter-spacing: .5px;
       transition: .2s;
     }
 
     nav a:hover {
-      color: var(--red);
+      color: var(--gold);
     }
 
-    .nav-button {
-      background: var(--red);
-      color: white;
-      padding: 11px 18px;
-      border-radius: 3px;
+    .nav-contact {
+      background: var(--black);
+      color: var(--gold-light);
+      padding: 12px 20px;
+      border: 1px solid var(--gold);
     }
 
-    .nav-button:hover {
-      color: white;
-      background: var(--dark-red);
+    .nav-contact:hover {
+      background: var(--gold);
+      color: var(--black);
     }
+
 
     /* =========================
        HERO
     ========================= */
 
     .hero {
-      min-height: 650px;
+      min-height: 680px;
+
       background:
         linear-gradient(
           90deg,
-          rgba(0,0,0,.86) 0%,
-          rgba(0,0,0,.63) 43%,
-          rgba(0,0,0,.18) 100%
+          rgba(0,0,0,.92) 0%,
+          rgba(0,0,0,.72) 43%,
+          rgba(0,0,0,.25) 100%
         ),
-        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85")
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=90")
         center/cover no-repeat;
 
       display: flex;
       align-items: center;
     }
 
-    .hero-content {
-      width: 1250px;
-      max-width: 100%;
+    .hero-inner {
+      max-width: 1350px;
+      width: 100%;
       margin: auto;
-      padding: 70px 25px;
+      padding: 90px 30px;
       color: white;
     }
 
-    .eyebrow {
-      color: #ffffff;
-      font-size: 14px;
+    .hero-label {
+      color: var(--gold-light);
       text-transform: uppercase;
-      letter-spacing: 3px;
-      margin-bottom: 15px;
-    }
-
-    .eyebrow strong {
-      color: #ff3152;
+      letter-spacing: 4px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 18px;
     }
 
     .hero h1 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(48px, 7vw, 86px);
-      line-height: .95;
-      max-width: 750px;
-      margin-bottom: 25px;
+      font-size: clamp(52px, 7vw, 92px);
+      line-height: .92;
+      font-weight: normal;
+      max-width: 800px;
+      margin-bottom: 30px;
     }
 
     .hero h1 span {
-      color: #ff3152;
+      color: var(--gold-light);
     }
 
     .hero p {
       max-width: 650px;
       font-size: 18px;
-      margin-bottom: 35px;
       color: #eeeeee;
+      margin-bottom: 35px;
     }
 
-    .hero-buttons {
+    .hero-line {
+      width: 80px;
+      height: 3px;
+      background: var(--gold);
+      margin-bottom: 25px;
+    }
+
+    .buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 14px;
     }
 
     .button {
       display: inline-block;
       padding: 15px 25px;
       font-weight: bold;
-      border-radius: 3px;
+      letter-spacing: .5px;
       transition: .2s;
     }
 
-    .button-red {
-      background: var(--red);
-      color: white;
+    .button-gold {
+      background: var(--gold);
+      color: var(--black);
     }
 
-    .button-red:hover {
-      background: var(--dark-red);
+    .button-gold:hover {
+      background: var(--gold-light);
       transform: translateY(-2px);
     }
 
     .button-outline {
-      border: 2px solid white;
+      border: 1px solid white;
       color: white;
     }
 
@@ -212,52 +207,74 @@
       color: var(--black);
     }
 
+
     /* =========================
-       SERVICES STRIP
+       GOLD ACCENT STRIP
     ========================= */
 
-    .service-strip {
+    .accent-strip {
+      height: 5px;
+      background: linear-gradient(
+        90deg,
+        var(--black),
+        var(--gold),
+        var(--gold-light),
+        var(--black)
+      );
+    }
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      background: white;
+      padding: 55px 30px;
+    }
+
+    .intro-grid {
+      max-width: 1200px;
+      margin: auto;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      max-width: 1250px;
-      margin: auto;
-      padding: 0 25px;
-      transform: translateY(-1px);
+      gap: 25px;
     }
 
-    .service {
-      padding: 30px 20px;
+    .intro-item {
       text-align: center;
+      padding: 15px;
       border-right: 1px solid #ddd;
-      background: white;
     }
 
-    .service:last-child {
+    .intro-item:last-child {
       border-right: none;
     }
 
-    .service-icon {
-      font-size: 30px;
+    .intro-icon {
+      color: var(--gold);
+      font-size: 28px;
       margin-bottom: 8px;
     }
 
-    .service h3 {
+    .intro-item h3 {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 17px;
       margin-bottom: 5px;
     }
 
-    .service p {
-      font-size: 13px;
+    .intro-item p {
       color: var(--gray);
+      font-size: 13px;
     }
 
+
     /* =========================
-       SECTIONS
+       GENERAL SECTIONS
     ========================= */
 
     section {
-      padding: 90px 25px;
+      padding: 90px 30px;
     }
 
     .container {
@@ -266,29 +283,35 @@
     }
 
     .section-label {
-      color: var(--red);
+      color: var(--gold);
       text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 13px;
+      letter-spacing: 4px;
+      font-size: 12px;
       font-weight: bold;
     }
 
     .section-title {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(38px, 5vw, 58px);
+      font-weight: normal;
+      font-size: clamp(40px, 5vw, 62px);
       line-height: 1;
-      margin: 8px 0 15px;
+      margin: 8px 0 18px;
     }
 
     .section-description {
+      max-width: 700px;
       color: var(--gray);
-      max-width: 650px;
-      margin-bottom: 40px;
+      margin-bottom: 45px;
     }
+
 
     /* =========================
        LISTINGS
     ========================= */
+
+    .listings {
+      background: var(--cream);
+    }
 
     .listing-grid {
       display: grid;
@@ -298,103 +321,125 @@
 
     .listing-card {
       background: white;
-      border: 1px solid #e5e5e5;
-      box-shadow: 0 8px 25px rgba(0,0,0,.06);
+      border: 1px solid #e1e1e1;
       transition: .25s;
-      overflow: hidden;
     }
 
     .listing-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,.12);
+      box-shadow: 0 15px 35px rgba(0,0,0,.10);
     }
 
     .listing-image {
-      height: 245px;
+      height: 250px;
       background-size: cover;
       background-position: center;
       position: relative;
     }
 
-    .listing-badge {
+    .badge {
       position: absolute;
-      top: 15px;
       left: 15px;
+      top: 15px;
       background: var(--red);
       color: white;
       padding: 7px 12px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: bold;
-      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .listing-info {
-      padding: 22px;
+    .listing-content {
+      padding: 24px;
     }
 
-    .listing-price {
-      color: var(--red);
+    .price {
+      color: var(--gold);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 27px;
+      font-size: 29px;
       font-weight: bold;
     }
 
-    .listing-address {
+    .address {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 18px;
-      margin: 5px 0 12px;
+      font-size: 19px;
+      margin: 5px 0 15px;
     }
 
-    .listing-details {
+    .details {
       display: flex;
-      gap: 15px;
-      color: #555;
-      font-size: 13px;
-      border-top: 1px solid #eee;
+      flex-wrap: wrap;
+      gap: 12px;
       padding-top: 15px;
+      border-top: 1px solid #eee;
+      color: #555;
+      font-size: 12px;
     }
 
     .listing-link {
       display: inline-block;
-      margin-top: 18px;
-      color: var(--red);
+      margin-top: 20px;
+      color: var(--black);
+      font-size: 12px;
       font-weight: bold;
-      font-size: 13px;
+      letter-spacing: 1px;
     }
+
+    .listing-link:hover {
+      color: var(--gold);
+    }
+
+    .center {
+      text-align: center;
+      margin-top: 40px;
+    }
+
 
     /* =========================
        ABOUT
     ========================= */
 
     .about {
-      background: #f6f6f6;
+      background: white;
     }
 
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 70px;
+      gap: 75px;
       align-items: center;
     }
 
-    .about-image {
-      min-height: 550px;
+    .about-photo {
+      min-height: 580px;
+
       background:
-        linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.08)),
-        url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85")
-        center/cover;
+        linear-gradient(
+          rgba(0,0,0,.08),
+          rgba(0,0,0,.08)
+        ),
+        url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1300&q=90")
+        center/cover no-repeat;
     }
 
-    .about-text h2 {
+    .about-copy h2 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 54px;
-      line-height: 1;
+      font-size: clamp(45px, 5vw, 65px);
+      font-weight: normal;
+      line-height: .95;
       margin: 10px 0 20px;
     }
 
-    .about-text p {
+    .gold-line {
+      width: 70px;
+      height: 3px;
+      background: var(--gold);
+      margin: 20px 0;
+    }
+
+    .about-copy p {
       color: #555;
-      margin-bottom: 18px;
+      margin-bottom: 17px;
     }
 
     .stats {
@@ -405,294 +450,381 @@
     }
 
     .stat {
-      border-left: 3px solid var(--red);
+      border-left: 3px solid var(--gold);
       padding-left: 15px;
     }
 
     .stat strong {
       display: block;
-      color: var(--red);
+      color: var(--black);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 30px;
+      font-size: 28px;
     }
 
     .stat span {
-      font-size: 12px;
-      color: #666;
+      font-size: 11px;
+      color: var(--gray);
     }
+
 
     /* =========================
        SERVICES
     ========================= */
 
-    .services-grid {
+    .services {
+      background: var(--black);
+      color: white;
+    }
+
+    .services .section-description {
+      color: #bbb;
+    }
+
+    .service-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
     .service-card {
-      min-height: 300px;
-      padding: 35px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      color: white;
-      background-size: cover;
-      background-position: center;
+      min-height: 350px;
       position: relative;
       overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
     }
 
     .service-card::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,.85));
+      background: linear-gradient(
+        transparent 20%,
+        rgba(0,0,0,.9)
+      );
     }
 
-    .service-card-content {
+    .service-content {
       position: relative;
+      padding: 30px;
       z-index: 2;
     }
 
-    .service-card h3 {
+    .service-content h3 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 30px;
+      font-size: 32px;
+      color: var(--gold-light);
       margin-bottom: 8px;
     }
 
-    .service-card p {
+    .service-content p {
+      color: #ddd;
       font-size: 14px;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
     }
 
-    .service-card a {
+    .service-content a {
       color: white;
+      font-size: 12px;
       font-weight: bold;
-      font-size: 13px;
+      letter-spacing: 1px;
     }
+
+    .service-content a:hover {
+      color: var(--gold);
+    }
+
 
     /* =========================
        AREAS
     ========================= */
 
     .areas {
-      background: #111;
-      color: white;
-    }
-
-    .areas .section-description {
-      color: #bbb;
+      background: var(--cream);
     }
 
     .areas-grid {
       display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 10px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
     }
 
     .area {
-      min-height: 180px;
-      display: flex;
-      align-items: flex-end;
-      padding: 15px;
+      min-height: 210px;
+      position: relative;
       background-size: cover;
       background-position: center;
-      position: relative;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
     }
 
     .area::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,.85));
+      background: linear-gradient(
+        transparent,
+        rgba(0,0,0,.8)
+      );
     }
 
     .area span {
       position: relative;
       z-index: 2;
+      color: white;
+      padding: 18px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 18px;
+      font-size: 20px;
     }
+
 
     /* =========================
-       TESTIMONIALS
+       REVIEWS
     ========================= */
 
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+    .reviews {
+      background: white;
     }
 
-    .testimonial {
-      padding: 30px;
-      border: 1px solid #e5e5e5;
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .review {
+      padding: 32px;
+      border: 1px solid #e2e2e2;
       background: white;
     }
 
     .stars {
-      color: #e0a900;
-      letter-spacing: 2px;
+      color: var(--gold);
+      letter-spacing: 3px;
       margin-bottom: 15px;
     }
 
-    .testimonial p {
+    .review p {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 17px;
       font-style: italic;
+      font-size: 17px;
       color: #444;
       margin-bottom: 20px;
     }
 
-    .testimonial strong {
-      font-size: 14px;
+    .review strong {
+      font-size: 13px;
     }
+
 
     /* =========================
-       CTA
+       ZILLOW CTA
     ========================= */
 
-    .cta {
-      padding: 75px 25px;
-      background:
-        linear-gradient(90deg, rgba(120,0,15,.94), rgba(200,16,46,.88)),
-        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80")
-        center/cover;
+    .zillow-section {
+      background: var(--black);
       color: white;
+      text-align: center;
+      padding: 85px 30px;
     }
 
-    .cta-inner {
+    .zillow-section h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(40px, 5vw, 62px);
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    .zillow-section p {
+      color: #bbb;
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background:
+        linear-gradient(
+          120deg,
+          #b68b32,
+          #d4ad59,
+          #a97820
+        );
+      color: var(--black);
+      padding: 75px 30px;
+    }
+
+    .contact-inner {
       max-width: 1250px;
       margin: auto;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 30px;
     }
 
-    .cta h2 {
+    .contact h2 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 48px;
+      font-size: clamp(38px, 5vw, 58px);
+      font-weight: normal;
       line-height: 1;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
-    .cta p {
-      color: #f5dfe3;
+    .contact p {
+      max-width: 600px;
     }
 
-    .cta-contact {
+    .contact-info {
       display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 12px;
       font-weight: bold;
     }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
 
     /* =========================
        FOOTER
     ========================= */
 
     footer {
-      background: #111;
+      background: #0b0b0b;
       color: white;
-      padding: 45px 25px;
+      padding: 55px 30px 25px;
     }
 
     .footer-inner {
       max-width: 1250px;
       margin: auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 40px;
+      align-items: center;
     }
 
-    .footer-logo {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 25px;
-    }
-
-    .footer-logo span {
-      display: block;
-      font-family: Arial, sans-serif;
-      font-size: 9px;
-      letter-spacing: 3px;
+    .secondary-logo {
+      width: 150px;
+      background: white;
+      padding: 5px;
     }
 
     .footer-links {
       display: flex;
-      gap: 20px;
+      justify-content: center;
       flex-wrap: wrap;
-      align-items: center;
+      gap: 20px;
     }
 
     .footer-links a {
+      color: #ccc;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    .footer-contact {
+      text-align: right;
       font-size: 13px;
       color: #ccc;
     }
 
-    .footer-links a:hover {
-      color: white;
-    }
-
     .copyright {
       max-width: 1250px;
-      margin: 30px auto 0;
+      margin: 35px auto 0;
       padding-top: 20px;
       border-top: 1px solid #333;
-      color: #888;
-      font-size: 11px;
+      text-align: center;
+      color: #777;
+      font-size: 10px;
     }
+
 
     /* =========================
        MOBILE
     ========================= */
 
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
 
       nav {
         display: none;
       }
 
-      .service-strip {
+      .intro-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .service:nth-child(2) {
+      .intro-item:nth-child(2) {
         border-right: none;
       }
 
       .listing-grid,
-      .services-grid,
-      .testimonial-grid {
+      .service-grid,
+      .review-grid {
         grid-template-columns: 1fr;
       }
 
       .about-grid {
         grid-template-columns: 1fr;
-        gap: 35px;
       }
 
-      .about-image {
-        min-height: 400px;
+      .about-photo {
+        min-height: 420px;
       }
 
       .areas-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .cta-inner {
+      .contact-inner {
         flex-direction: column;
         align-items: flex-start;
       }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .secondary-logo {
+        margin: auto;
+      }
+
+      .footer-contact {
+        text-align: center;
+      }
     }
+
 
     @media (max-width: 600px) {
 
+      .nav {
+        min-height: 75px;
+        padding: 8px 18px;
+      }
+
+      .main-logo {
+        width: 170px;
+      }
+
       .hero {
-        min-height: 600px;
+        min-height: 610px;
+      }
+
+      .hero-inner {
+        padding: 70px 20px;
       }
 
       .hero h1 {
@@ -703,54 +835,70 @@
         padding: 65px 18px;
       }
 
-      .service-strip {
-        grid-template-columns: 1fr;
-        padding: 0;
+      .intro {
+        padding: 40px 18px;
       }
 
-      .service {
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-item {
         border-right: none;
         border-bottom: 1px solid #ddd;
       }
 
-      .stats {
-        grid-template-columns: 1fr;
+      .intro-item:last-child {
+        border-bottom: none;
       }
 
       .areas-grid {
         grid-template-columns: 1fr 1fr;
       }
 
-      .cta h2 {
-        font-size: 38px;
+      .stats {
+        grid-template-columns: 1fr;
       }
 
-      .nav {
-        padding: 13px 18px;
+      .contact {
+        padding: 60px 20px;
       }
 
-      .logo {
-        font-size: 22px;
+      .buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        text-align: center;
       }
     }
+
   </style>
 </head>
 
+
 <body>
+
 
   <!-- =========================
        HEADER
   ========================= -->
 
   <header>
+
     <div class="nav">
 
-      <a href="#home" class="logo">
-        <span class="logo-mark">◯</span> CRYSTAL DUKES
-        <span>REALTY TEAM</span>
+      <a href="#home">
+        <img
+          src="Main%20Logo.png"
+          alt="Crystal Dukes REALTOR®"
+          class="main-logo"
+        >
       </a>
 
       <nav>
+
         <a href="#home">Home</a>
         <a href="#buy">Buy</a>
         <a href="#sell">Sell</a>
@@ -758,11 +906,19 @@
         <a href="#about">About</a>
         <a href="#reviews">Reviews</a>
         <a href="#areas">Areas</a>
-        <a href="#contact" class="nav-button">Contact</a>
+
+        <a href="#contact" class="nav-contact">
+          Contact
+        </a>
+
       </nav>
 
     </div>
+
   </header>
+
+
+  <div class="accent-strip"></div>
 
 
   <!-- =========================
@@ -771,34 +927,40 @@
 
   <section class="hero" id="home">
 
-    <div class="hero-content">
+    <div class="hero-inner">
 
-      <div class="eyebrow">
-        Your Trusted <strong>Dothan Real Estate Agent</strong>
+      <div class="hero-label">
+        Your Trusted Dothan REALTOR®
       </div>
 
+      <div class="hero-line"></div>
+
       <h1>
-        Crystal<br>
-        <span>Dukes</span>, REALTOR®
+        Your Next Chapter<br>
+        <span>Starts Here.</span>
       </h1>
 
       <p>
-        Helping you buy, sell, and invest in Southeast Alabama,
-        Northwest Florida, and Southwest Georgia.
+        Helping you buy, sell, and invest with confidence
+        throughout Southeast Alabama, Northwest Florida,
+        and Southwest Georgia.
       </p>
 
-      <div class="hero-buttons">
+      <div class="buttons">
 
         <a
-          class="button button-red"
           href="https://www.zillow.com/dothan-al/"
           target="_blank"
           rel="noopener"
+          class="button button-gold"
         >
-          🔎 SEARCH HOMES ON ZILLOW →
+          SEARCH HOMES ON ZILLOW →
         </a>
 
-        <a class="button button-outline" href="#sell">
+        <a
+          href="#sell"
+          class="button button-outline"
+        >
           SELL YOUR HOME →
         </a>
 
@@ -810,95 +972,113 @@
 
 
   <!-- =========================
-       SERVICE STRIP
+       INTRO
   ========================= -->
 
-  <div class="service-strip">
+  <section class="intro">
 
-    <div class="service">
-      <div class="service-icon">📍</div>
-      <h3>LOCAL EXPERTISE</h3>
-      <p>Deep knowledge of the Wiregrass and surrounding areas.</p>
+    <div class="intro-grid">
+
+      <div class="intro-item">
+        <div class="intro-icon">⌖</div>
+        <h3>LOCAL EXPERTISE</h3>
+        <p>
+          Knowledge of the Wiregrass and surrounding markets.
+        </p>
+      </div>
+
+      <div class="intro-item">
+        <div class="intro-icon">♢</div>
+        <h3>PERSONALIZED SERVICE</h3>
+        <p>
+          A real estate experience tailored to your goals.
+        </p>
+      </div>
+
+      <div class="intro-item">
+        <div class="intro-icon">◇</div>
+        <h3>CONSTANT COMMUNICATION</h3>
+        <p>
+          Keeping you informed throughout the process.
+        </p>
+      </div>
+
+      <div class="intro-item">
+        <div class="intro-icon">↗</div>
+        <h3>PROFESSIONAL GUIDANCE</h3>
+        <p>
+          Helping you make confident real estate decisions.
+        </p>
+      </div>
+
     </div>
 
-    <div class="service">
-      <div class="service-icon">👥</div>
-      <h3>PERSONALIZED SERVICE</h3>
-      <p>Guidance tailored to your real estate goals.</p>
-    </div>
-
-    <div class="service">
-      <div class="service-icon">💬</div>
-      <h3>CONSTANT COMMUNICATION</h3>
-      <p>You'll always know what's happening.</p>
-    </div>
-
-    <div class="service">
-      <div class="service-icon">📈</div>
-      <h3>PROVEN RESULTS</h3>
-      <p>Helping families achieve their real estate dreams.</p>
-    </div>
-
-  </div>
+  </section>
 
 
   <!-- =========================
        FEATURED LISTINGS
   ========================= -->
 
-  <section id="listings">
+  <section class="listings" id="listings">
 
     <div class="container">
 
-      <div class="section-label">Explore</div>
+      <div class="section-label">
+        Featured
+      </div>
 
       <h2 class="section-title">
         Featured Properties
       </h2>
 
       <p class="section-description">
-        Check out some of Crystal Dukes Realty Team's current
-        listings in Dothan and surrounding areas.
+        Explore properties currently being represented by
+        Crystal Dukes Realty Team.
       </p>
 
 
       <div class="listing-grid">
 
-        <!-- PROPERTY 1 -->
+
+        <!-- 624 PRESTWICK -->
 
         <article class="listing-card">
 
           <div
             class="listing-image"
-            style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85');"
+            style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=90');"
           >
-            <div class="listing-badge">
-              Just Listed
+
+            <div class="badge">
+              JUST LISTED
             </div>
+
           </div>
 
-          <div class="listing-info">
+          <div class="listing-content">
 
-            <div class="listing-price">
+            <div class="price">
               $619,000
             </div>
 
-            <div class="listing-address">
+            <div class="address">
               624 Prestwick Drive<br>
               Dothan, AL 36305
             </div>
 
-            <div class="listing-details">
-              <span>🛏 4 Beds</span>
-              <span>🛁 4 Baths</span>
-              <span>📐 3,005 Sq Ft</span>
+            <div class="details">
+              <span>4 Beds</span>
+              <span>4 Baths</span>
+              <span>3,005 Sq Ft</span>
+              <span>0.80 Acres</span>
             </div>
 
             <a
               href="#contact"
               class="listing-link"
             >
-              CONTACT CRYSTAL →
+              INQUIRE ABOUT THIS PROPERTY →
             </a>
 
           </div>
@@ -906,29 +1086,29 @@
         </article>
 
 
-        <!-- PROPERTY 2 -->
+        <!-- 7550 HWY 85 -->
 
         <article class="listing-card">
 
           <div
             class="listing-image"
-            style="background-image:url('https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=85');"
+            style="background-image:url('https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=90');"
           ></div>
 
-          <div class="listing-info">
+          <div class="listing-content">
 
-            <div class="listing-price">
-              Featured Listing
+            <div class="price">
+              Featured
             </div>
 
-            <div class="listing-address">
+            <div class="address">
               7550 Hwy 85<br>
               Daleville, AL
             </div>
 
-            <div class="listing-details">
-              <span>🏡 Residential</span>
-              <span>📍 Daleville</span>
+            <div class="details">
+              <span>Residential</span>
+              <span>Daleville</span>
             </div>
 
             <a
@@ -943,29 +1123,29 @@
         </article>
 
 
-        <!-- PROPERTY 3 -->
+        <!-- 710 HOUSTON -->
 
         <article class="listing-card">
 
           <div
             class="listing-image"
-            style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85');"
+            style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=90');"
           ></div>
 
-          <div class="listing-info">
+          <div class="listing-content">
 
-            <div class="listing-price">
-              Featured Listing
+            <div class="price">
+              Featured
             </div>
 
-            <div class="listing-address">
+            <div class="address">
               710 Houston St<br>
               Cottonwood, AL
             </div>
 
-            <div class="listing-details">
-              <span>🏡 Residential</span>
-              <span>📍 Cottonwood</span>
+            <div class="details">
+              <span>Residential</span>
+              <span>Cottonwood</span>
             </div>
 
             <a
@@ -981,15 +1161,16 @@
 
       </div>
 
-      <div style="text-align:center; margin-top:40px;">
+
+      <div class="center">
 
         <a
           href="https://www.zillow.com/dothan-al/"
           target="_blank"
           rel="noopener"
-          class="button button-red"
+          class="button button-gold"
         >
-          VIEW MORE HOMES ON ZILLOW →
+          SEARCH MORE HOMES ON ZILLOW →
         </a>
 
       </div>
@@ -1000,19 +1181,20 @@
 
 
   <!-- =========================
-       ABOUT CRYSTAL
+       ABOUT
   ========================= -->
 
   <section class="about" id="about">
 
     <div class="container about-grid">
 
-      <div class="about-image"></div>
+      <div class="about-photo"></div>
 
-      <div class="about-text">
+
+      <div class="about-copy">
 
         <div class="section-label">
-          Meet
+          Meet Your REALTOR®
         </div>
 
         <h2>
@@ -1020,40 +1202,47 @@
           Dukes
         </h2>
 
+        <div class="gold-line"></div>
+
         <p>
-          <strong>REALTOR® | Director of Productivity | Regional Land Ambassador</strong>
+          <strong>
+            REALTOR® | Director of Productivity |
+            Regional Land Ambassador
+          </strong>
         </p>
 
         <p>
-          Crystal Dukes is dedicated to helping buyers, sellers,
-          and investors navigate real estate with confidence.
+          Crystal Dukes is committed to helping buyers,
+          sellers, and investors navigate the real estate
+          process with confidence and clarity.
         </p>
 
         <p>
-          Serving Southeast Alabama, Northwest Florida,
-          and Southwest Georgia, Crystal combines local market
-          knowledge with personalized service and consistent communication.
+          With a focus on Southeast Alabama, Northwest Florida,
+          and Southwest Georgia, Crystal provides personalized
+          service and professional guidance from start to finish.
         </p>
 
-        <a href="#contact" class="button button-red">
-          LEARN MORE ABOUT CRYSTAL →
+        <a href="#contact" class="button button-gold">
+          CONNECT WITH CRYSTAL →
         </a>
+
 
         <div class="stats">
 
           <div class="stat">
-            <strong>100+</strong>
-            <span>Families Helped</span>
+            <strong>LOCAL</strong>
+            <span>Market Knowledge</span>
           </div>
 
           <div class="stat">
-            <strong>$30M+</strong>
-            <span>In Sales</span>
+            <strong>PERSONAL</strong>
+            <span>Client Service</span>
           </div>
 
           <div class="stat">
-            <strong>5★</strong>
-            <span>Client Experience</span>
+            <strong>PRO</strong>
+            <span>Real Estate Guidance</span>
           </div>
 
         </div>
@@ -1066,10 +1255,10 @@
 
 
   <!-- =========================
-       BUY / SELL / INVEST
+       SERVICES
   ========================= -->
 
-  <section id="buy">
+  <section class="services" id="buy">
 
     <div class="container">
 
@@ -1082,24 +1271,26 @@
       </h2>
 
       <p class="section-description">
-        Whether you're buying your first home, selling a property,
-        or looking for your next investment, Crystal is here to help.
+        Whether you're buying, selling, or exploring your next
+        investment, Crystal is here to help guide you home.
       </p>
 
 
-      <div class="services-grid">
+      <div class="service-grid">
+
 
         <div
           class="service-card"
-          style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85');"
+          style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=90');"
         >
 
-          <div class="service-card-content">
+          <div class="service-content">
 
             <h3>Buy a Home</h3>
 
             <p>
-              Find the perfect home with guidance every step of the way.
+              Find the right property with professional
+              guidance every step of the way.
             </p>
 
             <a
@@ -1118,15 +1309,16 @@
         <div
           class="service-card"
           id="sell"
-          style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=85');"
+          style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=90');"
         >
 
-          <div class="service-card-content">
+          <div class="service-content">
 
             <h3>Sell Your Home</h3>
 
             <p>
-              Get strategic guidance designed to position your property for success.
+              Position your property for success with
+              strategic real estate guidance.
             </p>
 
             <a href="#contact">
@@ -1140,15 +1332,16 @@
 
         <div
           class="service-card"
-          style="background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=85');"
+          style="background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=90');"
         >
 
-          <div class="service-card-content">
+          <div class="service-content">
 
             <h3>Invest</h3>
 
             <p>
-              Explore opportunities for long-term growth in real estate.
+              Explore real estate opportunities for your
+              long-term goals.
             </p>
 
             <a href="#contact">
@@ -1183,7 +1376,7 @@
       </h2>
 
       <p class="section-description">
-        Helping buyers and sellers across Southeast Alabama,
+        Serving clients across Southeast Alabama,
         Northwest Florida, and Southwest Georgia.
       </p>
 
@@ -1192,51 +1385,58 @@
 
         <div
           class="area"
-          style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=600&q=80');"
+          style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=700&q=85');"
         >
           <span>Dothan, AL</span>
         </div>
 
         <div
           class="area"
-          style="background-image:url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=600&q=80');"
+          style="background-image:url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=700&q=85');"
         >
           <span>Rehobeth, AL</span>
         </div>
 
         <div
           class="area"
-          style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80');"
+          style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=85');"
         >
           <span>Enterprise, AL</span>
         </div>
 
         <div
           class="area"
-          style="background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80');"
+          style="background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=700&q=85');"
         >
           <span>Ozark, AL</span>
         </div>
 
         <div
           class="area"
-          style="background-image:url('https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=600&q=80');"
+          style="background-image:url('https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=700&q=85');"
         >
           <span>Headland, AL</span>
         </div>
 
         <div
           class="area"
-          style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80');"
+          style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=85');"
         >
           <span>Northwest Florida</span>
         </div>
 
         <div
           class="area"
-          style="background-image:url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=600&q=80');"
+          style="background-image:url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=700&q=85');"
         >
           <span>Southwest Georgia</span>
+        </div>
+
+        <div
+          class="area"
+          style="background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=700&q=85');"
+        >
+          <span>Wiregrass Area</span>
         </div>
 
       </div>
@@ -1250,65 +1450,73 @@
        REVIEWS
   ========================= -->
 
-  <section id="reviews">
+  <section class="reviews" id="reviews">
 
     <div class="container">
 
       <div class="section-label">
-        Client Testimonials
+        Client Experience
       </div>
 
       <h2 class="section-title">
         What Clients Are Saying
       </h2>
 
+      <p class="section-description">
+        Real client reviews can be added here as we collect
+        Crystal's verified testimonials.
+      </p>
 
-      <div class="testimonial-grid">
 
-        <div class="testimonial">
+      <div class="review-grid">
+
+        <div class="review">
 
           <div class="stars">
             ★★★★★
           </div>
 
           <p>
-            "Crystal made the entire process smooth and stress-free.
-            She truly cares about her clients!"
+            Client testimonial coming soon.
           </p>
 
-          <strong>— Happy Client</strong>
+          <strong>
+            — Crystal Dukes Realty Team
+          </strong>
 
         </div>
 
 
-        <div class="testimonial">
+        <div class="review">
 
           <div class="stars">
             ★★★★★
           </div>
 
           <p>
-            "Professional, knowledgeable, and always available.
-            We highly recommend Crystal!"
+            Client testimonial coming soon.
           </p>
 
-          <strong>— Happy Client</strong>
+          <strong>
+            — Crystal Dukes Realty Team
+          </strong>
 
         </div>
 
 
-        <div class="testimonial">
+        <div class="review">
 
           <div class="stars">
             ★★★★★
           </div>
 
           <p>
-            "She went above and beyond to help us find the perfect home.
-            The best realtor in the area!"
+            Client testimonial coming soon.
           </p>
 
-          <strong>— Happy Client</strong>
+          <strong>
+            — Crystal Dukes Realty Team
+          </strong>
 
         </div>
 
@@ -1320,12 +1528,39 @@
 
 
   <!-- =========================
+       ZILLOW SEARCH
+  ========================= -->
+
+  <section class="zillow-section">
+
+    <h2>
+      Looking for Your Next Home?
+    </h2>
+
+    <p>
+      Browse available homes and discover properties
+      throughout the Dothan and Wiregrass area.
+    </p>
+
+    <a
+      href="https://www.zillow.com/dothan-al/"
+      target="_blank"
+      rel="noopener"
+      class="button button-gold"
+    >
+      SEARCH HOMES ON ZILLOW →
+    </a>
+
+  </section>
+
+
+  <!-- =========================
        CONTACT
   ========================= -->
 
-  <section class="cta" id="contact">
+  <section class="contact" id="contact">
 
-    <div class="cta-inner">
+    <div class="contact-inner">
 
       <div>
 
@@ -1336,12 +1571,13 @@
 
         <p>
           Whether you're buying, selling, or investing,
-          Crystal Dukes is ready to help.
+          Crystal Dukes is ready to help guide you home.
         </p>
 
       </div>
 
-      <div class="cta-contact">
+
+      <div class="contact-info">
 
         <a href="tel:8507049406">
           📞 850-704-9406
@@ -1349,6 +1585,10 @@
 
         <a href="mailto:crystaldukes@kw.com">
           ✉ crystaldukes@kw.com
+        </a>
+
+        <a href="#home">
+          ↑ BACK TO TOP
         </a>
 
       </div>
@@ -1366,10 +1606,16 @@
 
     <div class="footer-inner">
 
-      <div class="footer-logo">
-        CRYSTAL DUKES
-        <span>REALTY TEAM</span>
+      <div>
+
+        <img
+          src="CD%20Secondary%20Logo.png"
+          alt="Crystal Dukes Realty"
+          class="secondary-logo"
+        >
+
       </div>
+
 
       <div class="footer-links">
 
@@ -1384,19 +1630,29 @@
 
       </div>
 
+
+      <div class="footer-contact">
+
+        Crystal Dukes, REALTOR®<br>
+        Keller Williams Realty Southeast Alabama<br><br>
+        850-704-9406<br>
+        crystaldukes@kw.com
+
+      </div>
+
     </div>
+
 
     <div class="copyright">
 
       © 2026 Crystal Dukes Realty Team.
-      All rights reserved.
-      <br><br>
-
+      All Rights Reserved.<br>
       Keller Williams Realty Southeast Alabama
 
     </div>
 
   </footer>
+
 
 </body>
 </html>
