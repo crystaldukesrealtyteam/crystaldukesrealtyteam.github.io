@@ -3529,7 +3529,22 @@ footer .footer-bottom {
       }
     }
 
-  </style>
+  
+
+/* Featured property panel: cinematic blackish crimson instead of pure black. */
+.featured .property-content {
+  background: linear-gradient(132deg, #24070c 0%, #350812 48%, #190609 100%) !important;
+  background-color: #24070c !important;
+  border-left: 1px solid rgba(199, 162, 71, .85) !important;
+  color: #fff !important;
+}
+.featured .property-content .property-stats,
+.featured .property-content .property-stat,
+.featured .property-content hr {
+  border-color: rgba(199, 162, 71, .48) !important;
+}
+
+</style>
 
 <style id="crimson-plus-10-percent">
 /* Subtle +10% crimson boost: preserve the black cinematic shadows and gold trim. */
@@ -3576,6 +3591,341 @@ footer .footer-bottom {
     background-color: #D31635 !important;
   }
 }
+</style>
+
+
+  <style id="mockup-match-final-overrides">
+    :root {
+      --cream: #fbf8f1;
+      --white: #fffdf9;
+      --soft-gray: #f4f0e8;
+      --red: #e0001b;
+      --gold: #d39a24;
+      --gold-light: #f0c55b;
+    }
+    body { background: #fffdf9; }
+    .guiding, .areas, .about { background-color: #fbf8f1 !important; }
+    .featured, .listings { background-color: #fffdf9 !important; }
+    .property-card, .listing-card, .listing-item { background: #fffdf9 !important; }
+    .hero, .services, .zillow, .zillow-cta, .zillow-banner, footer {
+      background-color: #080707;
+    }
+    .hero::before, .services::before, .zillow::before, footer::before {
+      pointer-events: none;
+    }
+    .btn-gold, .nav-contact, .btn-red, .btn-primary { background-color: #e0001b !important; }
+    .eyebrow, .service-area-line, .section-label { color: #e0001b; }
+    .guiding h2 span, .hero h1 span, .about h2 span, .services h2 span { color: #d39a24; }
+    @media (max-width: 760px) {
+      .container { width: min(100% - 28px, 1180px); }
+      header { position: relative; }
+      .nav { min-height: auto; padding: 12px 0; gap: 12px; flex-wrap: wrap; }
+      .logo { max-width: 185px; height: auto; }
+      .nav-links { flex-wrap: wrap; gap: 10px 14px; justify-content: flex-start; }
+      .hero-grid, .guiding-grid, .featured-grid, .areas-grid, .about-grid { grid-template-columns: 1fr !important; }
+      .hero { min-height: auto; }
+      .hero-photo-wrap { min-height: 280px; }
+      .hero-photo { max-height: 350px; object-fit: contain; }
+      .buttons { flex-wrap: wrap; }
+      .listing-grid, .listings-grid, .property-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    }
+    @media (max-width: 460px) {
+      .listing-grid, .listings-grid, .property-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+
+
+<style id="correct-reference-colors-layout">
+/* Match the approved screenshot: cream content sections, dark only where shown. */
+:root { --cream:#F8F5F0; --white:#FFFDF9; --red:#E0001B; --gold:#D39A24; }
+html, body { background:#fffdf9 !important; color:#151313; }
+.guiding, .featured, .listings, .areas, .about {
+  background:#fffdf9 !important; color:#171313 !important;
+}
+.guiding::before, .featured::before, .listings::before, .areas::before, .about::before {
+  opacity:.22;
+}
+.guiding h2, .featured h2, .listings h2, .areas h2, .about h2,
+.guiding .section-heading h2, .featured .section-heading h2,
+.listings .section-heading h2, .areas .section-heading h2,
+.about .about-content h2 { color:#111 !important; }
+.guiding p, .featured p, .listings p, .areas p, .about p,
+.featured .section-heading p, .about .about-content p { color:#262222 !important; }
+.guiding .section-label, .featured .section-label, .listings .section-label,
+.areas .section-label, .about .section-label { color:#e0001b !important; }
+.featured { border:0 !important; }
+.featured .featured-showcase {
+  display:grid !important;
+  grid-template-columns:minmax(180px,.72fr) minmax(260px,1fr) minmax(260px,1fr) !important;
+  align-items:stretch !important;
+  gap:0 !important;
+  background:#fffdf9 !important;
+}
+.featured .featured-intro {
+  padding:34px 26px 28px 0 !important;
+  align-self:center;
+}
+.featured .property-card {
+  height:100%;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+}
+.featured .property-content {
+  background:#080707 !important;
+  color:#fff !important;
+}
+.featured .property-content h3,
+.featured .property-content .property-address { color:#fff !important; }
+.featured .property-content .property-description { color:#f1eeee !important; }
+.featured .property-content .property-price,
+.featured .property-content .property-stats strong { color:#e8b63d !important; }
+.featured .property-content .property-stats,
+.featured .property-content .property-description { border-color:rgba(211,154,36,.45) !important; }
+.listings {
+  background:#fffdf9 !important;
+  border-top:1px solid #eee8e1 !important;
+  border-bottom:1px solid #eee8e1 !important;
+}
+.listings .listing-card {
+  background:#fff !important;
+  border:1px solid #e5dfd7 !important;
+  border-radius:0 !important;
+  box-shadow:0 2px 7px rgba(0,0,0,.05) !important;
+}
+.listings .listing-price { color:#bd7900 !important; }
+.listings .listing-status, .listings .listing-link {
+  background:#e0001b !important; color:#fff !important;
+}
+.services {
+  background:
+    radial-gradient(ellipse at 0% 20%,rgba(224,0,27,.42),transparent 45%),
+    radial-gradient(ellipse at 100% 80%,rgba(125,0,18,.35),transparent 45%),
+    linear-gradient(115deg,#080707 0%,#190609 55%,#310711 100%) !important;
+  color:#fff !important;
+}
+.services .section-heading h2, .services .section-heading p { color:#fff !important; }
+.services .service-grid { background:rgba(211,154,36,.7) !important; }
+.services .service-card {
+  background:#fffaf5 !important; color:#171313 !important; border-radius:0 !important;
+}
+.services .service-card h3 { color:#171313 !important; }
+.services .service-card p { color:#332d2d !important; }
+.areas {
+  background:#f8f5f0 !important;
+  background-image:linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.25)) !important;
+}
+.areas .area-card { background:#fffdf9 !important; border:1px solid #d39a24 !important; }
+.about {
+  background:#fffdf9 !important;
+  color:#171313 !important;
+}
+.about .about-content h2, .about .about-content p { color:#171313 !important; }
+.about .about-content h2 span { color:#c88919 !important; }
+.about .about-photo::before { border-color:#d39a24 !important; }
+/* The approved mockup transitions from About directly into the Zillow banner. */
+.contact { display:none !important; }
+.zillow {
+  background:
+    radial-gradient(ellipse at 85% 50%,rgba(224,0,27,.65),transparent 50%),
+    linear-gradient(105deg,#8d0016 0%,#c80020 48%,#8e0016 100%) !important;
+  color:#fff !important;
+}
+.zillow h2, .zillow p { color:#fff !important; }
+.zillow .btn-gold { background:#e6b84a !important; color:#080707 !important; }
+.zillow .btn-outline, .zillow .btn-secondary { background:transparent !important; color:#fff !important; border-color:#e6b84a !important; }
+footer {
+  background:
+    radial-gradient(ellipse at 85% 10%,rgba(224,0,27,.28),transparent 48%),
+    linear-gradient(115deg,#080707 0%,#180508 58%,#30050d 100%) !important;
+  color:#fff !important;
+}
+@media(max-width:900px) {
+ .featured .featured-showcase { grid-template-columns:1fr 1fr !important; }
+ .featured .featured-intro { grid-column:1/-1; padding:26px 0 !important; }
+}
+@media(max-width:600px) {
+ .featured .featured-showcase { grid-template-columns:1fr !important; }
+ .featured .featured-intro { grid-column:auto; }
+}
+</style>
+
+
+<style id="cinematic-red-buttons-readable-featured-fix">
+/* Cinematic crimson buttons: dimensional red glow, not flat bright red. */
+:root { --cinematic-red:#e00024; --cinematic-red-deep:#8f0018; --cinematic-red-hot:#ff1738; }
+.btn, .nav-contact, .listing-status, .listing-link, button,
+.about .btn, .hero .btn, .guiding .btn, .featured .btn,
+.zillow .btn, .zillow-cta .btn {
+  background: linear-gradient(115deg, #a9001b 0%, #e00024 48%, #b90020 100%) !important;
+  color:#fff !important;
+  border:1px solid rgba(255,190,74,.65) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.13),
+              0 5px 18px rgba(155,0,24,.28) !important;
+  text-decoration:none !important;
+  text-shadow:0 1px 1px rgba(0,0,0,.25);
+  transition:background .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.btn:hover, .nav-contact:hover, .listing-link:hover, button:hover {
+  background:linear-gradient(115deg,#c00020 0%,#ff1738 48%,#d00026 100%) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 0 22px rgba(224,0,36,.42) !important;
+  transform:translateY(-1px);
+}
+/* Gold is reserved for the secondary Zillow action in the banner. */
+.zillow .btn-gold, .zillow-cta .btn-gold {
+  background:linear-gradient(115deg,#d1a13a,#f0c65a 52%,#c28b22) !important;
+  color:#110b05 !important; border-color:#f3d47d !important; text-shadow:none;
+}
+.zillow .btn-outline, .zillow .btn-secondary, .zillow-cta .btn-outline {
+  background:linear-gradient(115deg,#870016,#c90025 55%,#970019) !important;
+  color:#fff !important; border-color:#e4b54c !important;
+}
+/* Keep the featured listing panel black, but make every line readable. */
+.featured .featured-showcase {
+  grid-template-columns:minmax(200px,.72fr) minmax(300px,1.08fr) minmax(315px,1fr) !important;
+  align-items:stretch !important;
+}
+.featured .property-content {
+  box-sizing:border-box !important;
+  min-width:0 !important;
+  padding:22px 24px 20px !important;
+  background:#090808 !important;
+  color:#fff !important;
+}
+.featured .property-content .property-tag,
+.featured .property-content .property-tag * { color:#ff2441 !important; }
+.featured .property-content h3 {
+  color:#fff !important;
+  font-size:clamp(24px,2.15vw,34px) !important;
+  line-height:1.08 !important;
+  letter-spacing:-.025em !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  margin:5px 0 4px !important;
+}
+.featured .property-content .property-location {
+  color:#e8e2dc !important;
+  font-size:14px !important;
+  line-height:1.4 !important;
+  overflow-wrap:normal !important;
+}
+.featured .property-content .property-price {
+  color:#f0bd43 !important;
+  font-size:clamp(27px,2.5vw,37px) !important;
+  line-height:1.15 !important;
+  font-weight:700 !important;
+  margin:10px 0 8px !important;
+}
+.featured .property-content .property-stats {
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:5px !important;
+  padding:10px 0 !important;
+  margin:8px 0 12px !important;
+  border-top:1px solid rgba(211,154,36,.5) !important;
+  border-bottom:1px solid rgba(211,154,36,.5) !important;
+}
+.featured .property-content .property-stat { min-width:0 !important; text-align:center !important; }
+.featured .property-content .property-stats strong {
+  display:block !important; color:#f0bd43 !important; font-size:clamp(17px,1.5vw,23px) !important;
+  line-height:1.2 !important; white-space:nowrap !important;
+}
+.featured .property-content .property-stats span {
+  display:block !important; color:#f5f0ea !important; font-size:10px !important;
+  line-height:1.4 !important; text-transform:uppercase !important; letter-spacing:.09em !important;
+}
+.featured .property-content .property-details,
+.featured .property-content p.property-details {
+  color:#f5f1ed !important;
+  font-size:13px !important;
+  line-height:1.55 !important;
+  opacity:1 !important;
+  margin:10px 0 15px !important;
+  overflow-wrap:normal !important;
+}
+.featured .property-content .buttons { margin-top:12px !important; }
+.featured .property-content .btn { display:inline-flex !important; align-items:center; justify-content:center; min-height:42px; padding:12px 20px !important; }
+@media(max-width:1050px) {
+  .featured .featured-showcase { grid-template-columns:minmax(180px,.72fr) minmax(250px,1fr) minmax(280px,1fr) !important; }
+  .featured .property-content { padding:18px !important; }
+}
+@media(max-width:760px) {
+  .featured .featured-showcase { grid-template-columns:1fr !important; }
+  .featured .featured-intro { grid-column:auto !important; padding:24px 0 !important; }
+  .featured .property-content h3 { font-size:30px !important; }
+  .featured .property-content .property-details { font-size:14px !important; }
+  .btn { max-width:100%; white-space:normal; }
+}
+</style>
+
+
+<style id="zillow-gold-and-plain-property-links-fix">
+/* Zillow CTA: the search button stays gold, as requested. */
+.zillow .buttons .btn-dark,
+.zillow .buttons a.btn-dark,
+.zillow-cta .buttons .btn-dark {
+  background:linear-gradient(115deg,#c9962c 0%,#f0c65a 52%,#c28b22 100%) !important;
+  color:#100b04 !important;
+  border:1px solid #f3d47d !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 5px 16px rgba(0,0,0,.18) !important;
+  text-shadow:none !important;
+}
+.zillow .buttons .btn-dark:hover,
+.zillow .buttons a.btn-dark:hover,
+.zillow-cta .buttons .btn-dark:hover {
+  background:linear-gradient(115deg,#d9a93e 0%,#ffda73 52%,#d09a2c 100%) !important;
+  color:#100b04 !important;
+}
+/* Listing-card VIEW PROPERTY links: plain red text, no filled box. */
+.listings .listing-link,
+.listing-card .listing-link {
+  display:inline-block !important;
+  width:auto !important;
+  min-height:0 !important;
+  padding:0 !important;
+  margin-top:8px !important;
+  background:transparent !important;
+  background-image:none !important;
+  color:#d00020 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  text-shadow:none !important;
+  font-weight:700 !important;
+  text-decoration:none !important;
+}
+.listings .listing-link:hover,
+.listing-card .listing-link:hover {
+  background:transparent !important;
+  background-image:none !important;
+  color:#990017 !important;
+  border:0 !important;
+  box-shadow:none !important;
+  transform:none !important;
+  text-decoration:underline !important;
+}
+</style>
+
+
+<style id="hero-zillow-profile-black-gold-fix">
+  /* Hero: Zillow profile button should stay black with gold text and border. */
+  .hero a.btn-outline,
+  .hero .hero-buttons a.btn-outline,
+  .hero a[href*="zillow.com/profile"].btn-outline {
+    background: #080707 !important;
+    background-image: none !important;
+    color: #C7A247 !important;
+    border: 1px solid #C7A247 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  .hero a.btn-outline:hover,
+  .hero .hero-buttons a.btn-outline:hover,
+  .hero a[href*="zillow.com/profile"].btn-outline:hover {
+    background: #C7A247 !important;
+    color: #080707 !important;
+    border-color: #C7A247 !important;
+  }
 </style>
 
 </head>
@@ -4748,5 +5098,398 @@ footer .footer-bottom {
   
 
 
+
+<style id="cinematic-red-black-zillow-banner-final">
+/* Zillow banner: cinematic crimson like the header, with red as the dominant tone and black shadowed edges. */
+.zillow, .zillow-cta {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background:
+    radial-gradient(ellipse at 78% 48%, rgba(255, 0, 35, .68) 0%, rgba(190, 0, 28, .32) 34%, transparent 66%),
+    radial-gradient(ellipse at 18% 50%, rgba(205, 0, 30, .72) 0%, transparent 60%),
+    linear-gradient(105deg, #280308 0%, #760014 18%, #c00022 49%, #9b001b 73%, #260307 100%) !important;
+  border-top: 1px solid #c7a247 !important;
+  border-bottom: 1px solid #c7a247 !important;
+  color: #fff !important;
+}
+.zillow::before, .zillow-cta::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 104px, rgba(255, 70, 85, .055) 105px, transparent 107px),
+    linear-gradient(90deg, rgba(0,0,0,.20), transparent 26%, transparent 76%, rgba(0,0,0,.22)) !important;
+}
+.zillow h2, .zillow p, .zillow-cta h2, .zillow-cta p { color: #fff !important; }
+/* Keep the Zillow search action gold and the profile action outlined in gold. */
+.zillow .btn-gold, .zillow .buttons .btn-dark, .zillow-cta .btn-gold, .zillow-cta .buttons .btn-dark {
+  background: linear-gradient(115deg, #c9962c 0%, #f0c65a 52%, #c28b22 100%) !important;
+  color: #100b04 !important;
+  border: 1px solid #f3d47d !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 4px 15px rgba(0,0,0,.24) !important;
+}
+.zillow .btn-outline, .zillow .btn-secondary, .zillow-cta .btn-outline, .zillow-cta .btn-secondary {
+  background: rgba(35,0,6,.16) !important;
+  color: #fff !important;
+  border: 1px solid #c7a247 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06) !important;
+}
+
+
+/* Cinematic crimson treatment for the Learn More About Me and Let's Talk buttons. */
+.guiding .btn-dark,
+.about .btn-dark,
+#about .btn-dark,
+section .btn-dark[href="#about"],
+section .btn-dark[href="#contact"] {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  color: #fff !important;
+  background:
+    radial-gradient(ellipse at 78% 15%, rgba(255, 40, 62, .48), transparent 52%),
+    linear-gradient(112deg, #48000c 0%, #a5001c 27%, #e0002b 58%, #b00020 82%, #360008 100%) !important;
+  border: 1px solid #c7a247 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.13), 0 7px 22px rgba(90,0,15,.24) !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.35) !important;
+  transition: background .25s ease, box-shadow .25s ease, transform .25s ease !important;
+}
+.guiding .btn-dark::before,
+.about .btn-dark::before,
+#about .btn-dark::before,
+section .btn-dark[href="#about"]::before,
+section .btn-dark[href="#contact"]::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  background: repeating-linear-gradient(135deg, transparent 0 42px, rgba(255,255,255,.045) 43px, transparent 45px), linear-gradient(90deg, rgba(0,0,0,.2), transparent 50%, rgba(0,0,0,.12)) !important;
+}
+.guiding .btn-dark:hover,
+.about .btn-dark:hover,
+#about .btn-dark:hover,
+section .btn-dark[href="#about"]:hover,
+section .btn-dark[href="#contact"]:hover {
+  background:
+    radial-gradient(ellipse at 75% 10%, rgba(255, 55, 75, .58), transparent 55%),
+    linear-gradient(112deg, #5a0010 0%, #bd001f 30%, #f00032 58%, #c10025 82%, #42000b 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 8px 25px rgba(160,0,28,.32) !important;
+  transform: translateY(-1px) !important;
+}
+</style>
+
+<style id="match-view-property-button-style">
+/* Match Learn More and Let's Talk to the simple, brighter View Property button. */
+.guiding .btn-dark,
+.about .btn-dark,
+#about .btn-dark,
+section .btn-dark[href="#about"],
+section .btn-dark[href="#contact"] {
+  background: #c90024 !important;
+  color: #fff !important;
+  border: 1px solid #c7a247 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  isolation: auto !important;
+  overflow: visible !important;
+}
+.guiding .btn-dark::before,
+.about .btn-dark::before,
+#about .btn-dark::before,
+section .btn-dark[href="#about"]::before,
+section .btn-dark[href="#contact"]::before {
+  content: none !important;
+  display: none !important;
+}
+.guiding .btn-dark:hover,
+.about .btn-dark:hover,
+#about .btn-dark:hover,
+section .btn-dark[href="#about"]:hover,
+section .btn-dark[href="#contact"]:hover {
+  background: #dc002b !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+</style>
+
+
+
+<style id="gold-service-areas-and-zillow-profile-fix">
+/* Match the gold accents shown in the approved reference screenshots. */
+.service-area-line {
+  color: #e3b94f !important;
+}
+.service-area-line::before {
+  background: #c90024 !important;
+}
+/* The Zillow banner's profile button stays transparent with gold trim and text. */
+.zillow .buttons .btn-white,
+.zillow-cta .buttons .btn-white,
+.zillow-banner .buttons .btn-white {
+  background: transparent !important;
+  color: #e3b94f !important;
+  border: 1px solid #c7a247 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+.zillow .buttons .btn-white:hover,
+.zillow-cta .buttons .btn-white:hover,
+.zillow-banner .buttons .btn-white:hover {
+  background: rgba(199, 162, 71, 0.10) !important;
+  color: #f0cc68 !important;
+  box-shadow: none !important;
+}
+</style>
+
+
+
+<style id="zillow-profile-black-gold-final">
+/* Zillow profile CTA: black background, gold border and gold text. */
+section.zillow .buttons a.btn.btn-white,
+section.zillow .buttons a[href*="zillow.com/profile/crystalsellsalabama"] {
+  background: #080707 !important;
+  background-image: none !important;
+  color: #e3b94f !important;
+  border: 1px solid #c7a247 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+section.zillow .buttons a.btn.btn-white:hover,
+section.zillow .buttons a[href*="zillow.com/profile/crystalsellsalabama"]:hover {
+  background: #17120a !important;
+  color: #f0cc68 !important;
+  border-color: #e3b94f !important;
+  box-shadow: none !important;
+}
+</style>
+
+
+
+<style id="cinematic-crimson-learn-more-lets-talk-final">
+/* Cinematic crimson buttons: brighter red center, restrained dark edges, fine gold trim. */
+.guiding .btn-dark,
+.about .btn-dark,
+#about .btn-dark,
+section .btn-dark[href="#about"],
+section .btn-dark[href="#contact"] {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  color: #fff !important;
+  background: linear-gradient(112deg, #a9001d 0%, #d40029 38%, #e0002b 58%, #c90025 100%) !important;
+  border: 1px solid #c7a247 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 5px 14px rgba(120,0,22,.18) !important;
+  text-shadow: 0 1px 1px rgba(0,0,0,.16) !important;
+  transition: background .22s ease, box-shadow .22s ease, transform .22s ease !important;
+}
+.guiding .btn-dark::before,
+.about .btn-dark::before,
+#about .btn-dark::before,
+section .btn-dark[href="#about"]::before,
+section .btn-dark[href="#contact"]::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  background: linear-gradient(135deg, transparent 0 35%, rgba(255,255,255,.06) 48%, transparent 61%), radial-gradient(ellipse at 52% 0%, rgba(255,70,90,.22), transparent 70%) !important;
+}
+.guiding .btn-dark:hover,
+.about .btn-dark:hover,
+#about .btn-dark:hover,
+section .btn-dark[href="#about"]:hover,
+section .btn-dark[href="#contact"]:hover {
+  background: linear-gradient(112deg, #bc0023 0%, #e0002b 42%, #eb1238 60%, #d00027 100%) !important;
+  border-color: #e3bd5c !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 6px 16px rgba(150,0,28,.23) !important;
+  transform: translateY(-1px) !important;
+}
+</style>
+
+
+<style id="balanced-crimson-zillow-banner-and-profile-button">
+/* Zillow banner: balanced cinematic crimson and black, brighter red center, dark edges. */
+section.zillow {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background: linear-gradient(110deg, #260509 0%, #760018 18%, #b40025 43%, #c9002b 57%, #820019 82%, #260509 100%) !important;
+  border-top: 1px solid #c7a247 !important;
+  border-bottom: 1px solid #c7a247 !important;
+}
+section.zillow::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  background: radial-gradient(ellipse at 53% 42%, rgba(239, 0, 48, .35) 0%, rgba(188, 0, 36, .12) 43%, transparent 72%), repeating-linear-gradient(135deg, transparent 0 105px, rgba(255,255,255,.025) 106px, transparent 108px) !important;
+}
+/* All Zillow profile buttons use the same black-and-gold style, including the hero and banner. */
+a[href*="zillow.com/profile/crystalsellsalabama"] {
+  background: #080707 !important;
+  background-image: none !important;
+  color: #e3b94f !important;
+  border: 1px solid #c7a247 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+a[href*="zillow.com/profile/crystalsellsalabama"]:hover {
+  background: #17120a !important;
+  color: #f0cc68 !important;
+  border-color: #e3b94f !important;
+  box-shadow: 0 0 10px rgba(199,162,71,.12) !important;
+}
+</style>
+
+
+
+<style id="zillow-banner-profile-cinematic-red-final">
+/* Only the Zillow banner's profile button changes to cinematic crimson. Hero profile button remains black and gold. */
+section.zillow a[href*="zillow.com/profile/crystalsellsalabama"],
+section.zillow .buttons a.btn.btn-white {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background: linear-gradient(112deg, #a9001d 0%, #cc0028 34%, #e0002b 55%, #c50025 78%, #a9001d 100%) !important;
+  background-color: #c90027 !important;
+  color: #ffffff !important;
+  border: 1px solid #c7a247 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 4px 12px rgba(120,0,22,.18) !important;
+  text-shadow: 0 1px 1px rgba(0,0,0,.16) !important;
+}
+section.zillow a[href*="zillow.com/profile/crystalsellsalabama"]:hover,
+section.zillow .buttons a.btn.btn-white:hover {
+  background: linear-gradient(112deg, #bc0023 0%, #df002b 42%, #eb1238 60%, #c90025 100%) !important;
+  color: #ffffff !important;
+  border-color: #e3bd5c !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 6px 15px rgba(150,0,28,.23) !important;
+}
+</style>
+
+
+
+<style id="zillow-banner-match-reference-final">
+/* Match the reference: deep burgundy/black balanced with muted crimson, not a bright red hotspot. */
+section.zillow {
+  background: linear-gradient(108deg, #210609 0%, #4b0010 19%, #790018 38%, #8d001d 52%, #650014 73%, #210609 100%) !important;
+  border-top: 1px solid #c7a247 !important;
+  border-bottom: 1px solid #c7a247 !important;
+}
+section.zillow::before {
+  background: radial-gradient(ellipse at 49% 46%, rgba(171, 0, 34, .22) 0%, rgba(115, 0, 24, .12) 42%, transparent 74%), repeating-linear-gradient(135deg, transparent 0 105px, rgba(255,255,255,.022) 106px, transparent 108px) !important;
+}
+/* Banner profile button: transparent burgundy fill, gold outline, white text like the reference. */
+section.zillow a[href*="zillow.com/profile/crystalsellsalabama"],
+section.zillow .buttons a.btn.btn-white {
+  background: rgba(25, 2, 7, .58) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 1px solid #c7a247 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+section.zillow a[href*="zillow.com/profile/crystalsellsalabama"]:hover,
+section.zillow .buttons a.btn.btn-white:hover {
+  background: rgba(42, 3, 10, .82) !important;
+  color: #fff !important;
+  border-color: #e3bd5c !important;
+  box-shadow: 0 0 8px rgba(199,162,71,.10) !important;
+}
+</style>
+
 </body>
 </html>
+<style id="listing-view-all-plain-red-text">
+/* VIEW ALL LISTINGS: plain red text only, without a button background or border. */
+.listing-section-heading .listing-view-all,
+.listing-view-all {
+  display: inline-block !important;
+  width: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #ce001f !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+.listing-section-heading .listing-view-all:hover,
+.listing-view-all:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #a9001a !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  text-decoration: underline !important;
+  transform: none !important;
+}
+</style>
+
+
+<style id="featured-panel-final-cinematic-reddish-black">
+/* Final override: make the featured property panel visibly reddish-black, not pure black. */
+.featured .property-content,
+.featured .featured-showcase .property-content,
+section.featured .property-content {
+  background-color: #30040b !important;
+  background-image: radial-gradient(ellipse at 42% 18%, rgba(166, 0, 34, .34) 0%, rgba(110, 0, 23, .20) 38%, transparent 72%),
+    linear-gradient(125deg, #4a0712 0%, #31050c 42%, #200409 72%, #160307 100%) !important;
+  color: #fff !important;
+  border-left: 1px solid #c7a247 !important;
+}
+.featured .property-content h3,
+.featured .property-content .property-location,
+.featured .property-content .property-details,
+.featured .property-content p.property-details {
+  color: #fff !important;
+}
+.featured .property-content .property-price,
+.featured .property-content .property-stats strong {
+  color: #f0bd43 !important;
+}
+.featured .property-content .property-stats,
+.featured .property-content .property-stat {
+  border-color: rgba(199, 162, 71, .62) !important;
+}
+
+
+    /* HOME PHOTO BACKGROUND: subtle house image behind the creamy "Guiding You Home" section */
+    .guiding {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background-color: #f8f4ec;
+      background-image: linear-gradient(90deg,
+        rgba(248, 244, 236, 0.97) 0%,
+        rgba(248, 244, 236, 0.93) 35%,
+        rgba(248, 244, 236, 0.84) 62%,
+        rgba(248, 244, 236, 0.76) 100%),
+        url("7550-highway-85.jpg");
+      background-position: center, center right;
+      background-size: cover, cover;
+      background-repeat: no-repeat;
+    }
+
+    .guiding::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(135deg, rgba(255,255,255,0.16), transparent 55%, rgba(199,162,71,0.08));
+    }
+
+</style>
