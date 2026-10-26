@@ -3544,6 +3544,35 @@ footer .footer-bottom {
   border-color: rgba(199, 162, 71, .48) !important;
 }
 
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
 </style>
 
 <style id="crimson-plus-10-percent">
@@ -3565,6 +3594,35 @@ footer .footer-bottom {
     background-color: #C91632 !important;
   }
 }
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
 </style>
 
 <style id="crimson-plus-30-percent">
@@ -3591,6 +3649,35 @@ footer .footer-bottom {
     background-color: #D31635 !important;
   }
 }
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
 </style>
 
 
@@ -3632,7 +3719,36 @@ footer .footer-bottom {
     @media (max-width: 460px) {
       .listing-grid, .listings-grid, .property-grid { grid-template-columns: 1fr !important; }
     }
-  </style>
+  
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
+</style>
 
 
 <style id="correct-reference-colors-layout">
@@ -3723,8 +3839,7 @@ html, body { background:#fffdf9 !important; color:#151313; }
 .about .about-content h2, .about .about-content p { color:#171313 !important; }
 .about .about-content h2 span { color:#c88919 !important; }
 .about .about-photo::before { border-color:#d39a24 !important; }
-/* The approved mockup transitions from About directly into the Zillow banner. */
-.contact { display:none !important; }
+/* Keep the full contact section visible before the Zillow banner. */
 .zillow {
   background:
     radial-gradient(ellipse at 85% 50%,rgba(224,0,27,.65),transparent 50%),
@@ -3748,6 +3863,35 @@ footer {
  .featured .featured-showcase { grid-template-columns:1fr !important; }
  .featured .featured-intro { grid-column:auto; }
 }
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
 </style>
 
 
@@ -3856,6 +4000,35 @@ footer {
   .featured .property-content .property-details { font-size:14px !important; }
   .btn { max-width:100%; white-space:normal; }
 }
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
 </style>
 
 
@@ -3904,6 +4077,35 @@ footer {
   transform:none !important;
   text-decoration:underline !important;
 }
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
 </style>
 
 
@@ -3925,6 +4127,72 @@ footer {
     background: #C7A247 !important;
     color: #080707 !important;
     border-color: #C7A247 !important;
+  }
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
+</style>
+
+
+<style id="crystal-laptop-hero-update">
+  /* Hero portrait update: use the seated laptop portrait without changing page layout. */
+  .hero {
+    background:
+      radial-gradient(ellipse at 78% 48%, rgba(145, 0, 28, .34) 0%, rgba(67, 0, 12, .22) 36%, transparent 64%),
+      radial-gradient(ellipse at 75% 60%, rgba(199, 162, 71, .13) 0%, transparent 48%),
+      linear-gradient(105deg, #050505 0%, #100506 58%, #1b0308 100%) !important;
+  }
+  .hero-photo-wrap {
+    min-height: 520px;
+    isolation: isolate;
+  }
+  .hero-photo-wrap::before {
+    width: min(420px, 78%); height: min(420px, 78%);
+    border-color: #c7a247; opacity: .32; z-index: -1;
+    box-shadow: 0 0 90px rgba(153, 0, 30, .24);
+  }
+  .hero-photo-wrap::after {
+    width: min(340px, 64%); height: min(340px, 64%);
+    border-color: #c7a247; opacity: .18; z-index: -1;
+  }
+  .hero-photo {
+    width: min(560px, 100%); max-height: 600px; height: auto;
+    object-fit: contain; object-position: center bottom;
+    filter: drop-shadow(0 22px 38px rgba(0,0,0,.48));
+  }
+  @media (max-width: 900px) {
+    .hero-photo-wrap { min-height: 360px; }
+    .hero-photo { width: min(520px, 100%); max-height: 480px; }
+  }
+  @media (max-width: 600px) {
+    .hero-photo-wrap { min-height: 280px; }
+    .hero-photo { max-height: 370px; }
   }
 </style>
 
@@ -4689,7 +4957,7 @@ footer {
         <div class="about-photo">
 
           <img
-            src="Elegant Woman in a Modern Interior.png"
+            src="crystal-hero-laptop.png"
             alt="Crystal Dukes, REALTOR"
             loading="lazy"
           >
@@ -5180,6 +5448,35 @@ section .btn-dark[href="#contact"]:hover {
   box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 8px 25px rgba(160,0,28,.32) !important;
   transform: translateY(-1px) !important;
 }
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
 </style>
 
 <style id="match-view-property-button-style">
@@ -5214,6 +5511,35 @@ section .btn-dark[href="#contact"]:hover {
   box-shadow: none !important;
   transform: none !important;
 }
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
 </style>
 
 
@@ -5243,6 +5569,35 @@ section .btn-dark[href="#contact"]:hover {
   color: #f0cc68 !important;
   box-shadow: none !important;
 }
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
 </style>
 
 
@@ -5265,6 +5620,35 @@ section.zillow .buttons a[href*="zillow.com/profile/crystalsellsalabama"]:hover 
   border-color: #e3b94f !important;
   box-shadow: none !important;
 }
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
 </style>
 
 
@@ -5309,6 +5693,35 @@ section .btn-dark[href="#contact"]:hover {
   box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 6px 16px rgba(150,0,28,.23) !important;
   transform: translateY(-1px) !important;
 }
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
 </style>
 
 
@@ -5345,6 +5758,35 @@ a[href*="zillow.com/profile/crystalsellsalabama"]:hover {
   border-color: #e3b94f !important;
   box-shadow: 0 0 10px rgba(199,162,71,.12) !important;
 }
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
 </style>
 
 
@@ -5370,6 +5812,35 @@ section.zillow .buttons a.btn.btn-white:hover {
   border-color: #e3bd5c !important;
   box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 6px 15px rgba(150,0,28,.23) !important;
 }
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
 </style>
 
 
@@ -5400,6 +5871,72 @@ section.zillow .buttons a.btn.btn-white:hover {
   color: #fff !important;
   border-color: #e3bd5c !important;
   box-shadow: 0 0 8px rgba(199,162,71,.10) !important;
+}
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
+</style>
+
+
+<style id="featured-alignment-final-fix">
+/* Keep the featured house photo and information panel aligned edge-to-edge. */
+.featured .featured-showcase {
+  align-items: center !important;
+}
+.featured .property-card {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr) !important;
+  align-items: stretch !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+.featured .property-image {
+  align-self: stretch !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+  background-color: #f2e9df !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+.featured .property-content {
+  align-self: stretch !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+}
+@media (max-width: 900px) {
+  .featured .property-card { grid-template-columns: minmax(0, 1fr) !important; }
+  .featured .property-image { height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important; }
+  .featured .property-content { height: auto !important; }
 }
 </style>
 
@@ -5436,6 +5973,35 @@ section.zillow .buttons a.btn.btn-white:hover {
   text-decoration: underline !important;
   transform: none !important;
 }
+
+/* FEATURED LISTING PHOTO FIX: show the complete house photo instead of cropping it vertically. */
+.featured .featured-showcase {
+  grid-template-columns: minmax(170px,.72fr) minmax(300px,1.15fr) minmax(290px,1fr) !important;
+}
+.featured .property-card { min-width: 0 !important; }
+.featured .property-image {
+  height: clamp(320px, 38vw, 470px) !important;
+  min-height: 0 !important;
+  align-self: center !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+}
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(150px,.65fr) minmax(260px,1fr) minmax(265px,1fr) !important;
+  }
+  .featured .property-image { height: clamp(300px, 40vw, 420px) !important; }
+}
+@media (max-width: 760px) {
+  .featured .property-image {
+    height: auto !important; min-height: 0 !important; aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+  }
+}
+
 </style>
 
 
@@ -5491,5 +6057,86 @@ section.featured .property-content {
       pointer-events: none;
       background: linear-gradient(135deg, rgba(255,255,255,0.16), transparent 55%, rgba(199,162,71,0.08));
     }
+
+
+/* FINAL FEATURED PROPERTY LAYOUT: keep the intro separate, with clear spacing,
+   and align the full house photo and property panel as one shared-height card. */
+.featured .featured-showcase {
+  display: grid !important;
+  grid-template-columns: minmax(210px, 0.72fr) minmax(0, 2.28fr) !important;
+  gap: clamp(28px, 3vw, 48px) !important;
+  align-items: stretch !important;
+}
+.featured .featured-intro {
+  align-self: center !important;
+  min-width: 0 !important;
+  padding: 24px 0 !important;
+}
+.featured .property-card {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.92fr) !important;
+  gap: 0 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 100% !important;
+  min-height: 390px !important;
+  align-self: stretch !important;
+  align-items: stretch !important;
+  overflow: hidden !important;
+}
+.featured .property-image {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 390px !important;
+  align-self: stretch !important;
+  background-image: url("7550-highway-85.jpg") !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-color: #f3ece5 !important;
+  border-right: 1px solid rgba(199,162,71,.8) !important;
+}
+.featured .property-content {
+  min-width: 0 !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  padding: clamp(20px, 2.2vw, 32px) !important;
+}
+.featured .property-content .buttons,
+.featured .property-content .btn { align-self: flex-start !important; }
+@media (max-width: 1050px) {
+  .featured .featured-showcase {
+    grid-template-columns: minmax(170px, .62fr) minmax(0, 1.8fr) !important;
+    gap: 24px !important;
+  }
+  .featured .property-card {
+    grid-template-columns: minmax(0, 1fr) minmax(230px, .95fr) !important;
+  }
+  .featured .property-content { padding: 20px !important; }
+}
+@media (max-width: 760px) {
+  .featured .featured-showcase {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+  .featured .featured-intro { padding: 10px 0 !important; }
+  .featured .property-card {
+    grid-template-columns: 1fr !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+  .featured .property-image {
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 4 / 3 !important;
+    background-size: contain !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(199,162,71,.8) !important;
+  }
+  .featured .property-content { height: auto !important; padding: 22px !important; }
+}
 
 </style>
