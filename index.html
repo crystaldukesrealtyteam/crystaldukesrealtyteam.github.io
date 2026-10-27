@@ -7038,4 +7038,19 @@ section.featured .property-content {
   background-repeat: no-repeat !important;
 }
 
+
+/* Final small alignment fixes requested: listing eyebrow red; footer headings aligned. */
+.listing-section-heading > div > p {
+  color: var(--red, #E31335) !important;
+}
+footer .footer-grid > div:nth-child(3) > h4 {
+  position: relative !important;
+  top: -16px !important;
+}
+@media (max-width: 900px) {
+  footer .footer-grid > div:nth-child(3) > h4 {
+    top: 0 !important;
+  }
+}
+
 </style>
