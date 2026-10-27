@@ -4168,7 +4168,7 @@ footer {
     background:
       linear-gradient(90deg, rgba(5, 5, 5, .96) 0%, rgba(12, 4, 6, .86) 38%, rgba(20, 3, 7, .40) 72%, rgba(12, 2, 5, .42) 100%),
       radial-gradient(ellipse at 78% 48%, rgba(145, 0, 28, .30) 0%, rgba(67, 0, 12, .12) 36%, transparent 64%),
-      url('crystal-hero-background.png') center center / cover no-repeat !important;
+      url('wide_cinematic_high_quality_real_estate_style_li.png') center center / cover no-repeat !important;
   }
   .hero-photo-wrap {
     min-height: 520px;
@@ -4225,6 +4225,41 @@ footer {
   }
   .footer-connect-list > li > a .footer-connect-icon {
     border-radius: 50% !important;
+  }
+</style>
+
+
+
+<style id="hero-single-background-image-update">
+  /* Use the new wide image as the hero background; no separate hero portrait overlay. */
+  .hero {
+    position: relative;
+    isolation: isolate;
+    min-height: 700px;
+    background-image:
+      linear-gradient(90deg, rgba(5, 5, 5, .90) 0%, rgba(8, 4, 5, .78) 38%, rgba(10, 4, 5, .35) 68%, rgba(10, 4, 5, .12) 100%),
+      url('wide_cinematic_high_quality_real_estate_style_li.png') !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+  .hero-grid {
+    display: block !important;
+    width: min(1180px, 92%) !important;
+    padding: 100px 0 !important;
+  }
+  .hero-grid > div:first-child {
+    max-width: 690px;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-photo-wrap { display: none !important; }
+  @media (max-width: 700px) {
+    .hero { min-height: 650px; background-position: 62% center !important; }
+    .hero-grid { padding: 75px 0 !important; }
+    .hero-grid > div:first-child { max-width: 100%; }
+    .hero h1 { font-size: clamp(42px, 11vw, 62px); }
+    .hero-subtitle { font-size: 16px; }
   }
 </style>
 
@@ -4354,16 +4389,7 @@ footer {
         </div>
 
 
-        <div class="hero-photo-wrap">
 
-          <img
-            src="crystal-hero-laptop-up.png"
-            alt="Crystal Dukes, REALTOR"
-            class="hero-photo"
-            loading="eager"
-          >
-
-        </div>
 
       </div>
 
