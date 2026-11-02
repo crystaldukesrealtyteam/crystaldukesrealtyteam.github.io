@@ -7259,4 +7259,51 @@ footer .footer-grid > div:nth-child(3) > h4 {
   section { padding-top: 54px !important; padding-bottom: 54px !important; }
 }
 
+
+
+/* FINAL FEATURED PROPERTY RESPONSIVE FIX — keep the complete status label visible. */
+@media (max-width: 1200px) {
+  .featured .featured-showcase {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 22px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
+  }
+  .featured .featured-intro {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 12px 0 4px !important;
+  }
+  .featured .property-card {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr) !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+  .featured .property-content { min-width: 0 !important; }
+  .featured .property-tag {
+    display: inline-block !important;
+    position: static !important;
+    width: max-content !important;
+    max-width: 100% !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    clip: auto !important;
+    clip-path: none !important;
+    transform: none !important;
+  }
+}
+@media (max-width: 760px) {
+  .featured .property-card { grid-template-columns: minmax(0, 1fr) !important; }
+  .featured .property-image {
+    width: 100% !important;
+    aspect-ratio: 4 / 3 !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  .featured .property-content { padding: 24px 20px !important; }
+}
 </style>
