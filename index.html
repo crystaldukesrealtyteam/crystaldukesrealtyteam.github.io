@@ -5893,7 +5893,7 @@ footer {
 
                 <div class="kw-footer-lockup" aria-label="Keller Williams Realty Southeast Alabama">
           <img
-            src="Keller Williams Southeast Alabama Logo.png"
+            src="kw-se-logo.png"
             alt="Keller Williams Realty Southeast Alabama"
             class="kw-footer-logo"
             loading="lazy"
@@ -7058,14 +7058,25 @@ section.featured .property-content {
 .featured .property-content .buttons,
 .featured .property-content .btn { align-self: flex-start !important; }
 @media (max-width: 1050px) {
+  /* Keep the Featured Property intro and card inside the viewport.
+     The previous narrow two-column layout squeezed the intro and caused
+     nearby labels to appear clipped at tablet/laptop widths. */
   .featured .featured-showcase {
-    grid-template-columns: minmax(170px, .62fr) minmax(0, 1.8fr) !important;
-    gap: 24px !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 22px !important;
+  }
+  .featured .featured-intro {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
   .featured .property-card {
-    grid-template-columns: minmax(0, 1fr) minmax(230px, .95fr) !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: minmax(0, 1.05fr) minmax(230px, .95fr) !important;
   }
-  .featured .property-content { padding: 20px !important; }
+  .featured .property-content { padding: 24px !important; }
 }
 @media (max-width: 760px) {
   .featured .featured-showcase {
