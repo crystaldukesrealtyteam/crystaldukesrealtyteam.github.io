@@ -4751,6 +4751,165 @@ footer {
 
 </style>
 
+
+
+<style id="mobile-only-header-footer-layout-final">
+/* Responsive header and footer organization; shared navigation/footer links appear on desktop and mobile. */
+@media (max-width: 760px) {
+  /* Header: centered logo followed by two balanced rows of four links. */
+  .nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    padding: 18px 0 16px !important;
+  }
+  .nav > a {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  .nav .logo {
+    display: block !important;
+    width: clamp(165px, 48vw, 220px) !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .nav nav,
+  header nav { width: 100% !important; min-width: 0 !important; }
+  .nav-links {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+    align-items: center !important;
+    justify-items: center !important;
+    gap: 13px 7px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+  .nav-links li {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .nav-links a {
+    display: inline-block !important;
+    max-width: 100% !important;
+    padding: 4px 2px !important;
+    font-size: clamp(8px, 2.25vw, 10px) !important;
+    line-height: 1.35 !important;
+    letter-spacing: .45px !important;
+    white-space: normal !important;
+    text-align: center !important;
+    overflow-wrap: anywhere !important;
+  }
+  .nav-links .nav-contact { padding: 6px 5px !important; }
+
+  /* Footer: brand statement first, then Explore and Connect side by side. */
+  footer .footer-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    align-items: start !important;
+    gap: 26px 20px !important;
+    text-align: left !important;
+  }
+  footer .footer-grid > div:first-child {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  footer .footer-logo {
+    display: block !important;
+    width: min(230px, 72%) !important;
+    margin: 0 auto 14px !important;
+  }
+  footer .footer-about {
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+  footer .footer-grid > div:nth-child(2),
+  footer .footer-grid > div:nth-child(3) {
+    grid-column: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+  footer .footer-grid > div:nth-child(2) h4,
+  footer .footer-grid > div:nth-child(3) h4 {
+    margin: 0 0 14px !important;
+    text-align: left !important;
+  }
+  footer .footer-links {
+    display: grid !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    text-align: left !important;
+  }
+  footer .footer-links li { min-width: 0 !important; }
+  footer .footer-links a,
+  footer .footer-links li > span {
+    display: block !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    overflow-wrap: anywhere !important;
+    text-align: left !important;
+  }
+  footer .footer-connect-list > li > a {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    max-width: 100% !important;
+  }
+  footer .footer-connect-list > li > a .footer-connect-icon {
+    flex: 0 0 27px !important;
+    width: 27px !important;
+    height: 27px !important;
+  }
+  footer .footer-connect-list > li > a > span:last-child {
+    min-width: 0 !important;
+    overflow-wrap: anywhere !important;
+  }
+  footer .kw-footer-lockup {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
+    width: min(280px, 90%) !important;
+    max-width: 100% !important;
+    margin: 4px auto 0 !important;
+  }
+  footer .kw-footer-logo {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  footer .footer-bottom {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  footer .footer-grid { column-gap: 14px !important; }
+  footer .footer-links a,
+  footer .footer-links li > span { font-size: 12px !important; }
+  .nav-links { column-gap: 4px !important; }
+  .nav-links a { letter-spacing: .2px !important; }
+}
+</style>
 </head>
 
 
@@ -4802,6 +4961,10 @@ footer {
 
           <li>
             <a href="#listings">Listings</a>
+          </li>
+
+          <li>
+            <a href="#socials">Socials</a>
           </li>
 
           <li>
@@ -5843,6 +6006,12 @@ footer {
             </li>
 
             <li>
+              <a href="#socials">
+                Socials
+              </a>
+            </li>
+
+            <li>
               <a href="#contact">
                 Let's Talk
               </a>
@@ -5870,12 +6039,6 @@ footer {
               </a>
             </li>
             <li>
-              <a href="https://www.zillow.com/dothan-al/" target="_blank" rel="noopener">
-                <span class="footer-connect-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m16 16 4.5 4.5"/></svg></span>
-                <span>Search Homes on Zillow</span>
-              </a>
-            </li>
-            <li>
               <a href="https://www.zillow.com/profile/crystalsellsalabama" target="_blank" rel="noopener">
                 <span class="footer-connect-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5.5 20c.4-3.4 2.8-5.4 6.5-5.4s6.1 2 6.5 5.4"/></svg></span>
                 <span>View My Zillow Profile</span>
@@ -5884,10 +6047,24 @@ footer {
             <li>
               <a href="https://www.google.com/maps/search/?api=1&query=1841+Honeysuckle+Rd%2C+Dothan%2C+AL+36305%2C+United+States" target="_blank" rel="noopener" aria-label="Office location: 1841 Honeysuckle Road, Dothan, Alabama 36305">
                 <span class="footer-connect-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5.2-8 11-8 11S4 15.2 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
-                <span>1841 Honeysuckle Rd,<br>Dothan AL 36305, USA</span>
+                <span>1841 Honeysuckle Rd, Dothan AL, 36305, USA</span>
               </a>
             </li>
           </ul>
+          <div class="footer-socials" aria-label="Crystal Dukes social media">
+            <span class="footer-social-item" aria-label="Facebook">
+              <span class="footer-social-short" aria-hidden="true">f</span>
+              <span class="footer-social-name">Facebook</span>
+            </span>
+            <span class="footer-social-item" aria-label="Instagram">
+              <span class="footer-social-short" aria-hidden="true">◎</span>
+              <span class="footer-social-name">Instagram</span>
+            </span>
+            <span class="footer-social-item" aria-label="TikTok">
+              <span class="footer-social-short" aria-hidden="true">♪</span>
+              <span class="footer-social-name">TikTok</span>
+            </span>
+          </div>
 </div>
 
 
@@ -6853,6 +7030,66 @@ footer .footer-grid > div:nth-child(3) h4 {
   footer .footer-grid > div:nth-child(3) { margin-top: 0 !important; }
 }
 </style>
+
+<style id="desktop-social-icons-mobile-connect-list">
+/* Social platforms: desktop shows compact icon buttons in the Connect column.
+   Mobile shows the full platform names within that same Connect column.
+   This block does not alter the desktop grid or any other site section. */
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.footer-social-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  background: #D4142D;
+  border: 1px solid rgba(255,255,255,.22);
+  box-shadow: 0 4px 12px rgba(0,0,0,.28), 0 0 12px rgba(212,20,45,.20);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1;
+}
+.footer-social-name { display: none; }
+
+@media (max-width: 900px) {
+  .footer-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+    margin-top: 14px;
+  }
+  .footer-social-item {
+    width: auto;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    justify-content: flex-start;
+    font-size: inherit;
+    font-weight: 400;
+  }
+  .footer-social-short { display: none; }
+  .footer-social-name {
+    display: inline;
+    color: inherit;
+    font-size: inherit;
+    line-height: 1.5;
+  }
+}
+</style>
+
 </body>
 </html>
 <style id="listing-view-all-plain-red-text">
@@ -7305,5 +7542,45 @@ footer .footer-grid > div:nth-child(3) > h4 {
     min-height: 0 !important;
   }
   .featured .property-content { padding: 24px 20px !important; }
+}
+</style>
+
+
+<style id="mobile-footer-two-column-final-correction">
+/* Mobile footer only: keep Explore and Connect side by side. Desktop is untouched. */
+@media (max-width: 560px) {
+  footer .footer-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    align-items: start !important;
+    column-gap: 18px !important;
+    row-gap: 24px !important;
+  }
+  footer .footer-grid > div:first-child { grid-column: 1 / -1 !important; }
+  footer .footer-grid > div:nth-child(2),
+  footer .footer-grid > div:nth-child(3) {
+    grid-column: auto !important;
+    min-width: 0 !important;
+    margin-top: 0 !important;
+  }
+  footer .footer-grid > .kw-footer-lockup {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
+    margin-top: 8px !important;
+  }
+  footer .footer-links { gap: 11px !important; }
+  footer .footer-links li, footer .footer-links a, footer .footer-links span {
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+  footer .footer-connect-list > li > a {
+    align-items: flex-start !important;
+    gap: 8px !important;
+    max-width: 100% !important;
+  }
+  footer .footer-connect-list > li > a > span:last-child {
+    min-width: 0 !important;
+    overflow-wrap: anywhere !important;
+  }
 }
 </style>
