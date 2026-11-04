@@ -6051,19 +6051,25 @@ footer {
               </a>
             </li>
           </ul>
-          <div class="footer-socials" aria-label="Crystal Dukes social media">
-            <span class="footer-social-item" aria-label="Facebook">
+          <div class="footer-socials" id="socials" aria-label="Crystal Dukes social media">
+            <a class="footer-social-item" href="https://www.facebook.com/crystal.goinesdukes/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <span class="footer-social-short" aria-hidden="true">f</span>
               <span class="footer-social-name">Facebook</span>
-            </span>
-            <span class="footer-social-item" aria-label="Instagram">
-              <span class="footer-social-short" aria-hidden="true">◎</span>
+            </a>
+            <a class="footer-social-item" href="https://www.instagram.com/crystalsellsalabama/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <span class="footer-social-short footer-instagram-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2"></rect>
+                  <circle cx="12" cy="12" r="4.1"></circle>
+                  <circle class="instagram-dot" cx="17.6" cy="6.7" r="1.15"></circle>
+                </svg>
+              </span>
               <span class="footer-social-name">Instagram</span>
-            </span>
-            <span class="footer-social-item" aria-label="TikTok">
+            </a>
+            <a class="footer-social-item" href="https://www.tiktok.com/@crystalsellsalabama" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
               <span class="footer-social-short" aria-hidden="true">♪</span>
               <span class="footer-social-name">TikTok</span>
-            </span>
+            </a>
           </div>
 </div>
 
@@ -7581,6 +7587,299 @@ footer .footer-grid > div:nth-child(3) > h4 {
   footer .footer-connect-list > li > a > span:last-child {
     min-width: 0 !important;
     overflow-wrap: anywhere !important;
+  }
+}
+</style>
+
+
+<style id="social-icons-only-mobile-final">
+/* Only the three social links become icon buttons on mobile.
+   Explore and Connect headings, links, contact text, and all other footer content stay unchanged. */
+@media (max-width: 560px) {
+  footer .footer-socials {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    margin-top: 14px !important;
+  }
+  footer .footer-socials .footer-social-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px !important;
+    min-width: 42px !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    padding: 0 !important;
+    border: 1px solid rgba(255,255,255,.22) !important;
+    border-radius: 50% !important;
+    color: #fff !important;
+    background: #D4142D !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,.28), 0 0 12px rgba(212,20,45,.20) !important;
+    font-size: 23px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+  }
+  footer .footer-socials .footer-social-short {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #fff !important;
+  }
+  footer .footer-socials .footer-social-name {
+    display: none !important;
+  }
+}
+</style>
+
+
+<style id="smaller-social-icons-mobile-only">
+/* Reduce only the Facebook, Instagram, and TikTok buttons on mobile.
+   Desktop sizing and all other mobile footer elements remain unchanged. */
+@media (max-width: 560px) {
+  footer .footer-socials {
+    gap: 9px !important;
+  }
+  footer .footer-socials .footer-social-item {
+    width: 32px !important;
+    min-width: 32px !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    flex: 0 0 32px !important;
+    font-size: 18px !important;
+  }
+  footer .footer-socials .footer-social-short {
+    font-size: 18px !important;
+  }
+}
+</style>
+
+
+<style id="social-icons-sized-to-footer-text">
+/* Mobile only: make social buttons close to the height of the footer link text. */
+@media (max-width: 560px) {
+  footer .footer-socials {
+    gap: 8px !important;
+  }
+  footer .footer-socials .footer-social-item {
+    width: 26px !important;
+    min-width: 26px !important;
+    height: 26px !important;
+    min-height: 26px !important;
+    flex: 0 0 26px !important;
+    font-size: 15px !important;
+  }
+  footer .footer-socials .footer-social-short {
+    font-size: 15px !important;
+  }
+}
+</style>
+
+
+<style id="instagram-brand-icon-desktop-and-mobile">
+/* Instagram's recognizable camera glyph in white on the existing brand-red button.
+   Applies at every screen size; button sizing remains controlled by existing responsive CSS. */
+footer .footer-social-item[aria-label="Instagram"] .footer-instagram-mark {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  color: #fff !important;
+}
+footer .footer-social-item[aria-label="Instagram"] .footer-instagram-mark svg {
+  display: block !important;
+  width: 68% !important;
+  height: 68% !important;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+footer .footer-social-item[aria-label="Instagram"] .footer-instagram-mark .instagram-dot {
+  fill: currentColor;
+  stroke: none;
+}
+</style>
+
+
+<style id="mobile-header-navigation-and-socials">
+/* Mobile header: match the compact 4-column navigation in the reference,
+   then place the three social icons underneath. Desktop header is untouched. */
+@media (max-width: 560px) {
+  header .nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    padding: 18px 0 16px !important;
+  }
+  header .nav > a {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  header .nav .logo {
+    display: block !important;
+    width: clamp(150px, 42vw, 190px) !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+  header .nav nav {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  header .nav-links {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+    align-items: center !important;
+    justify-items: center !important;
+    gap: 13px 5px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+  header .nav-links > li {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    text-align: center !important;
+  }
+  header .nav-links > li > a {
+    display: inline-block !important;
+    max-width: 100% !important;
+    padding: 4px 2px !important;
+    font-size: clamp(8px, 2.2vw, 10px) !important;
+    line-height: 1.35 !important;
+    letter-spacing: .45px !important;
+    white-space: normal !important;
+    text-align: center !important;
+    overflow-wrap: anywhere !important;
+  }
+  header .nav-links > li:nth-child(7) {
+    grid-column: 3 / 4 !important;
+  }
+  header .nav-links > li.nav-social-icons {
+    grid-column: 1 / -1 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-top: 1px !important;
+  }
+  header .nav-social-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 26px !important;
+    height: 26px !important;
+    flex: 0 0 26px !important;
+    border-radius: 50% !important;
+    background: #D4142D !important;
+    border: 1px solid rgba(255,255,255,.28) !important;
+    color: #fff !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+  }
+  header .nav-instagram-icon svg {
+    display: block !important;
+    width: 17px !important;
+    height: 17px !important;
+    fill: none !important;
+    stroke: currentColor !important;
+    stroke-width: 1.9 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+  }
+  header .nav-instagram-icon .instagram-dot {
+    fill: currentColor !important;
+    stroke: none !important;
+  }
+  header .nav-tiktok-icon {
+    font-size: 16px !important;
+  }
+}
+</style>
+
+
+<style id="header-social-icons-all-screens">
+/* Header social icon treatment at desktop/tablet widths; mobile dimensions are set separately above. */
+header .nav-links > li.nav-social-icons {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+header .nav-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  border-radius: 50%;
+  background: #D4142D;
+  border: 1px solid rgba(255,255,255,.28);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+header .nav-instagram-icon svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+header .nav-instagram-icon .instagram-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+</style>
+
+
+<style id="mobile-header-two-row-text-navigation">
+@media (max-width: 560px) {
+  header .nav-links {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+    align-items: center !important;
+    justify-items: center !important;
+    gap: 13px 5px !important;
+  }
+  header .nav-links > li {
+    grid-column: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  header .nav-links > li > a {
+    display: inline-block !important;
+    padding: 4px 2px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
   }
 }
 </style>
