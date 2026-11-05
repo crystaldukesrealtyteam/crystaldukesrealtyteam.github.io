@@ -5882,6 +5882,123 @@ footer {
 }
 </style>
 
+
+<style id="crystal-feature-graphic-extended-height">
+@media (min-width: 901px) {
+  #reviews .reviews-feature {
+    height: 760px !important;
+    min-height: 760px !important;
+    max-height: 760px !important;
+    overflow: visible !important;
+  }
+  #reviews .reviews-feature img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    object-fit: fill !important;
+    transform: none !important;
+  }
+}
+@media (min-width: 561px) and (max-width: 900px) {
+  #reviews .reviews-feature {
+    height: 650px !important;
+    min-height: 650px !important;
+    max-height: 650px !important;
+  }
+  #reviews .reviews-feature img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    object-fit: fill !important;
+  }
+}
+@media (max-width: 560px) {
+  #reviews .reviews-feature {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  #reviews .reviews-feature img {
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+</style>
+
+
+<style id="crystal-listing-card-fonts-larger">
+/* Slightly larger typography for the four property cards. */
+.listings .listing-card .listing-price {
+  font-size: 24px !important;
+  line-height: 1.2 !important;
+}
+.listings .listing-card .listing-content h3 {
+  font-size: 19px !important;
+  line-height: 1.3 !important;
+}
+.listings .listing-card .listing-location {
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+}
+.listings .listing-card .listing-meta,
+.listings .listing-card .listing-meta span {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+.listings .listing-card .listing-link {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 1.1px !important;
+}
+</style>
+
+
+<style id="crystal-reviews-horizontal-slide-pages">
+#reviews #reviews-carousel {
+  overflow: hidden !important;
+  width: 100% !important;
+}
+#reviews #reviews-grid {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  gap: 0 !important;
+  will-change: transform;
+}
+#reviews #reviews-grid > .reviews-slide-page {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(2, minmax(250px, auto)) !important;
+  gap: 20px !important;
+  align-items: stretch !important;
+  box-sizing: border-box !important;
+}
+#reviews #reviews-grid > .reviews-slide-page .review-shot {
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 250px !important;
+  max-height: 320px !important;
+  flex: initial !important;
+  box-sizing: border-box !important;
+}
+@media (max-width: 900px) {
+  #reviews #reviews-grid > .reviews-slide-page {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, minmax(220px, auto)) !important;
+  }
+}
+@media (max-width: 560px) {
+  #reviews #reviews-grid > .reviews-slide-page {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: repeat(2, minmax(190px, auto)) !important;
+  }
+}
+</style>
+
 </head>
 
 
@@ -6718,7 +6835,7 @@ footer {
 
         <div class="reviews-layout">
           <aside class="reviews-feature" aria-label="Featured five-star review rating">
-            <img src="assets/reviews/featured-five-star-rating.png"
+            <img src="assets/crystal-dukes-client-reviews.png"
                  alt="Crystal Dukes real estate review summary showing five-star ratings">
           </aside>
 
@@ -8346,52 +8463,104 @@ footer .footer-grid > div:nth-child(3) h4 {
 
 
 <script>
-  (function () {
-    const cards = Array.from(document.querySelectorAll('#reviews-grid [data-review-source]'));
-    const track = document.getElementById('reviews-grid');
-    const viewport = document.getElementById('reviews-carousel');
-    const prev = document.getElementById('reviews-prev');
-    const next = document.getElementById('reviews-next');
-    if (!cards.length || !track || !viewport) return;
+(function () {
+  const track = document.getElementById('reviews-grid');
+  const viewport = document.getElementById('reviews-carousel');
+  const prev = document.getElementById('reviews-prev');
+  const next = document.getElementById('reviews-next');
+  if (!track || !viewport) return;
 
-    let page = 0;
-    let timer = null;
-    const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const originalCards = Array.from(track.querySelectorAll('[data-review-source]'));
+  if (!originalCards.length) return;
 
-    function columns() {
-      if (window.matchMedia('(max-width: 560px)').matches) return 1;
-      if (window.matchMedia('(max-width: 900px)').matches) return 2;
-      return 3;
+  let pageIndex = 0;
+  let timer = null;
+  let pages = [];
+  let isAnimating = false;
+  const reducedMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function cardsPerPage() {
+    if (window.matchMedia('(max-width: 560px)').matches) return 2;
+    if (window.matchMedia('(max-width: 900px)').matches) return 4;
+    return 6;
+  }
+
+  function buildPages() {
+    stopAuto();
+    pageIndex = 0;
+    track.innerHTML = '';
+    pages = [];
+    const size = cardsPerPage();
+
+    for (let i = 0; i < originalCards.length; i += size) {
+      const page = document.createElement('div');
+      page.className = 'reviews-slide-page';
+      originalCards.slice(i, i + size).forEach(card => {
+        card.hidden = false;
+        page.appendChild(card);
+      });
+      track.appendChild(page);
+      pages.push(page);
     }
-    function pageSize() { return columns() * 2; }
-    function pageCount() { return Math.ceil(cards.length / pageSize()); }
-    function update() {
-      const size = pageSize();
-      const first = page * size;
-      cards.forEach((card, i) => { card.hidden = !(i >= first && i < first + size); });
-      track.classList.remove('reviews-page-change');
-      void track.offsetWidth;
-      track.classList.add('reviews-page-change');
-      if (prev) prev.disabled = pageCount() <= 1;
-      if (next) next.disabled = pageCount() <= 1;
+
+    if (pages.length > 1) {
+      const clone = pages[0].cloneNode(true);
+      clone.classList.add('reviews-slide-clone');
+      track.appendChild(clone);
     }
-    function stopAuto() { if (timer) window.clearInterval(timer); timer = null; }
-    function startAuto() {
-      stopAuto();
-      if (reducedMotion || pageCount() <= 1) return;
-      timer = window.setInterval(() => { page = (page + 1) % pageCount(); update(); }, 5200);
-    }
-    if (prev) prev.addEventListener('click', () => { page = (page - 1 + pageCount()) % pageCount(); update(); startAuto(); });
-    if (next) next.addEventListener('click', () => { page = (page + 1) % pageCount(); update(); startAuto(); });
-    viewport.addEventListener('mouseenter', stopAuto);
-    viewport.addEventListener('mouseleave', startAuto);
-    viewport.addEventListener('focusin', stopAuto);
-    viewport.addEventListener('focusout', startAuto);
-    document.addEventListener('visibilitychange', () => { if (document.hidden) stopAuto(); else startAuto(); });
-    window.addEventListener('resize', () => { page = Math.min(page, pageCount() - 1); update(); startAuto(); });
-    update();
+    track.style.transform = 'translate3d(0,0,0)';
+    track.style.transition = 'transform .85s cubic-bezier(.22,.75,.25,1)';
+    if (prev) prev.disabled = pages.length <= 1;
+    if (next) next.disabled = pages.length <= 1;
     startAuto();
-  })();
+  }
+
+  function move(direction) {
+    if (pages.length <= 1 || isAnimating) return;
+    isAnimating = true;
+    pageIndex += direction;
+    track.style.transition = 'transform .85s cubic-bezier(.22,.75,.25,1)';
+    track.style.transform = `translate3d(-${pageIndex * 100}%,0,0)`;
+  }
+
+  track.addEventListener('transitionend', () => {
+    if (pageIndex >= pages.length) {
+      track.style.transition = 'none';
+      pageIndex = 0;
+      track.style.transform = 'translate3d(0,0,0)';
+    } else if (pageIndex < 0) {
+      track.style.transition = 'none';
+      pageIndex = pages.length - 1;
+      track.style.transform = `translate3d(-${pageIndex * 100}%,0,0)`;
+    }
+    isAnimating = false;
+  });
+
+  function stopAuto() {
+    if (timer) window.clearInterval(timer);
+    timer = null;
+  }
+  function startAuto() {
+    stopAuto();
+    if (reducedMotion || pages.length <= 1) return;
+    timer = window.setInterval(() => move(1), 3700);
+  }
+
+  if (prev) prev.addEventListener('click', () => { move(-1); startAuto(); });
+  if (next) next.addEventListener('click', () => { move(1); startAuto(); });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopAuto();
+    else startAuto();
+  });
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(buildPages, 160);
+  });
+
+  buildPages();
+})();
 </script>
 
 </body>
