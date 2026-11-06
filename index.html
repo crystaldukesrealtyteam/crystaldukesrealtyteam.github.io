@@ -5999,6 +5999,140 @@ footer {
 }
 </style>
 
+
+<style id="crystal-reviews-sliding-layout-fix">
+#reviews #reviews-carousel {
+  display: block !important;
+  position: relative !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+#reviews #reviews-grid {
+  display: flex !important;
+  flex-flow: row nowrap !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  gap: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  transform: translate3d(0,0,0);
+  transition: transform .85s cubic-bezier(.22,.75,.25,1) !important;
+  will-change: transform;
+}
+#reviews #reviews-grid > .reviews-slide-page {
+  display: grid !important;
+  position: relative !important;
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(2, 270px) !important;
+  gap: 16px !important;
+  padding: 2px 4px 8px !important;
+}
+#reviews #reviews-grid > .reviews-slide-page .review-shot {
+  display: flex !important;
+  min-width: 0 !important;
+  width: auto !important;
+  height: 270px !important;
+  min-height: 270px !important;
+  max-height: 270px !important;
+  overflow-y: auto !important;
+  box-sizing: border-box !important;
+}
+@media (max-width: 900px) {
+  #reviews #reviews-grid > .reviews-slide-page {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, 250px) !important;
+  }
+  #reviews #reviews-grid > .reviews-slide-page .review-shot {
+    height: 250px !important;
+    min-height: 250px !important;
+    max-height: 250px !important;
+  }
+}
+@media (max-width: 560px) {
+  #reviews #reviews-grid > .reviews-slide-page {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: repeat(2, 230px) !important;
+  }
+  #reviews #reviews-grid > .reviews-slide-page .review-shot {
+    height: 230px !important;
+    min-height: 230px !important;
+    max-height: 230px !important;
+  }
+}
+</style>
+
+
+<style id="crystal-reviews-true-continuous-marquee">
+#reviews #reviews-carousel {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  padding: 8px 4px 18px !important;
+}
+#reviews #reviews-grid {
+  display: grid !important;
+  grid-auto-flow: column !important;
+  grid-auto-columns: var(--review-card-width, 260px) !important;
+  grid-template-rows: repeat(2, 270px) !important;
+  gap: var(--review-card-gap, 18px) !important;
+  width: max-content !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 2px 0 8px !important;
+  transform: none !important;
+  transition: none !important;
+  animation: crystalReviewsMarquee 48s linear infinite !important;
+  animation-direction: normal;
+  will-change: transform;
+}
+#reviews #reviews-grid > .review-shot {
+  display: flex !important;
+  width: var(--review-card-width, 260px) !important;
+  min-width: var(--review-card-width, 260px) !important;
+  max-width: var(--review-card-width, 260px) !important;
+  height: 270px !important;
+  min-height: 270px !important;
+  max-height: 270px !important;
+  overflow-y: auto !important;
+  box-sizing: border-box !important;
+}
+#reviews #reviews-grid > .reviews-marquee-copy {
+  pointer-events: none !important;
+}
+@keyframes crystalReviewsMarquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+#reviews .reviews-source-note {
+  text-align: center !important;
+}
+@media (max-width: 900px) {
+  #reviews #reviews-grid { grid-template-rows: repeat(2, 250px) !important; }
+  #reviews #reviews-grid > .review-shot {
+    height: 250px !important;
+    min-height: 250px !important;
+    max-height: 250px !important;
+  }
+}
+@media (max-width: 560px) {
+  #reviews #reviews-grid { grid-template-rows: repeat(2, 230px) !important; }
+  #reviews #reviews-grid > .review-shot {
+    height: 230px !important;
+    min-height: 230px !important;
+    max-height: 230px !important;
+  }
+}
+</style>
+
 </head>
 
 
@@ -6829,13 +6963,13 @@ footer {
       <div class="container">
         <div class="reviews-heading">
           <p class="reviews-eyebrow">CLIENT EXPERIENCES</p>
-          <h2 id="reviews-title">Words from the people I've helped.</h2>
+          <h2 id="reviews-title">Kind words from my clients.</h2>
           <p>Every home journey is different. Here's what some of my clients have shared about their experience.</p>
         </div>
 
         <div class="reviews-layout">
           <aside class="reviews-feature" aria-label="Featured five-star review rating">
-            <img src="assets/crystal-dukes-client-reviews.png"
+            <img src="assets/crystal-dukes-client-reviews-1.png"
                  alt="Crystal Dukes real estate review summary showing five-star ratings">
           </aside>
 
@@ -8470,98 +8604,130 @@ footer .footer-grid > div:nth-child(3) h4 {
   const next = document.getElementById('reviews-next');
   if (!track || !viewport) return;
 
-  const originalCards = Array.from(track.querySelectorAll('[data-review-source]'));
-  if (!originalCards.length) return;
+  const cards = Array.from(track.querySelectorAll('[data-review-source]'));
+  if (!cards.length) return;
 
-  let pageIndex = 0;
-  let timer = null;
-  let pages = [];
-  let isAnimating = false;
-  const reducedMotion = window.matchMedia &&
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  function cardsPerPage() {
-    if (window.matchMedia('(max-width: 560px)').matches) return 2;
-    if (window.matchMedia('(max-width: 900px)').matches) return 4;
-    return 6;
-  }
-
-  function buildPages() {
-    stopAuto();
-    pageIndex = 0;
-    track.innerHTML = '';
-    pages = [];
-    const size = cardsPerPage();
-
-    for (let i = 0; i < originalCards.length; i += size) {
-      const page = document.createElement('div');
-      page.className = 'reviews-slide-page';
-      originalCards.slice(i, i + size).forEach(card => {
-        card.hidden = false;
-        page.appendChild(card);
-      });
-      track.appendChild(page);
-      pages.push(page);
-    }
-
-    if (pages.length > 1) {
-      const clone = pages[0].cloneNode(true);
-      clone.classList.add('reviews-slide-clone');
-      track.appendChild(clone);
-    }
-    track.style.transform = 'translate3d(0,0,0)';
-    track.style.transition = 'transform .85s cubic-bezier(.22,.75,.25,1)';
-    if (prev) prev.disabled = pages.length <= 1;
-    if (next) next.disabled = pages.length <= 1;
-    startAuto();
-  }
-
-  function move(direction) {
-    if (pages.length <= 1 || isAnimating) return;
-    isAnimating = true;
-    pageIndex += direction;
-    track.style.transition = 'transform .85s cubic-bezier(.22,.75,.25,1)';
-    track.style.transform = `translate3d(-${pageIndex * 100}%,0,0)`;
-  }
-
-  track.addEventListener('transitionend', () => {
-    if (pageIndex >= pages.length) {
-      track.style.transition = 'none';
-      pageIndex = 0;
-      track.style.transform = 'translate3d(0,0,0)';
-    } else if (pageIndex < 0) {
-      track.style.transition = 'none';
-      pageIndex = pages.length - 1;
-      track.style.transform = `translate3d(-${pageIndex * 100}%,0,0)`;
-    }
-    isAnimating = false;
-  });
-
-  function stopAuto() {
-    if (timer) window.clearInterval(timer);
-    timer = null;
-  }
-  function startAuto() {
-    stopAuto();
-    if (reducedMotion || pages.length <= 1) return;
-    timer = window.setInterval(() => move(1), 3700);
-  }
-
-  if (prev) prev.addEventListener('click', () => { move(-1); startAuto(); });
-  if (next) next.addEventListener('click', () => { move(1); startAuto(); });
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) stopAuto();
-    else startAuto();
-  });
   let resizeTimer;
+  let direction = 'normal';
+
+  function arrangeCards() {
+    track.querySelectorAll('.reviews-marquee-copy').forEach(node => node.remove());
+    track.innerHTML = '';
+
+    // Fill each visual column with its top and bottom review, preserving
+    // the familiar 3-column x 2-row presentation.
+    const ordered = [];
+    for ( (let i = 0; i < cards.length; i += 6) ) {
+      const group = cards.slice(i, i + 6);
+      if (group.length <= 3) {
+        ordered.push(...group);
+      } else {
+        for (let col = 0; col < 3; col++) {
+          if (group[col]) ordered.push(group[col]);
+          if (group[col + 3]) ordered.push(group[col + 3]);
+        }
+      }
+    }
+
+    ordered.forEach(card => {
+      card.hidden = false;
+      track.appendChild(card);
+    });
+
+    // Duplicate the full sequence to create a seamless, endless belt.
+    ordered.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.classList.add('reviews-marquee-copy');
+      clone.setAttribute('aria-hidden', 'true');
+      clone.querySelectorAll('a, button').forEach(el => el.setAttribute('tabindex', '-1'));
+      track.appendChild(clone);
+    });
+
+    const gap = window.matchMedia('(max-width: 560px)').matches ? 12 : 18;
+    const columns = window.matchMedia('(max-width: 560px)').matches ? 1 :
+                    window.matchMedia('(max-width: 900px)').matches ? 2 : 3;
+    const cardWidth = Math.max(220, (viewport.clientWidth - gap * (columns - 1)) / columns);
+    track.style.setProperty('--review-card-width', `${cardWidth}px`);
+    track.style.setProperty('--review-card-gap', `${gap}px`);
+    track.style.animation = 'none';
+    track.offsetHeight;
+    track.style.animation = '';
+    track.style.animationDirection = direction;
+  }
+
+  function nudgeMarquee(directionStep) {
+    const animation = track.getAnimations().find(item =>
+      item.effect && item.effect.getTiming().duration !== 'auto'
+    );
+    if (!animation) return;
+
+    // Move by one visible review group (3 columns on desktop, 2 on tablet,
+    // 1 on mobile), then let the continuous marquee keep flowing.
+    const columns = window.matchMedia('(max-width: 560px)').matches ? 1 :
+                    window.matchMedia('(max-width: 900px)').matches ? 2 : 3;
+    const cardWidth = parseFloat(getComputedStyle(track).getPropertyValue('--review-card-width')) || 260;
+    const gap = parseFloat(getComputedStyle(track).getPropertyValue('--review-card-gap')) || 18;
+    const groupWidth = columns * cardWidth + (columns - 1) * gap;
+    const fullLoopDistance = track.scrollWidth / 2;
+    if (!fullLoopDistance) return;
+
+    const duration = Number(animation.effect.getTiming().duration) || 48000;
+    const jump = duration * (groupWidth / fullLoopDistance);
+    const current = Number(animation.currentTime) || 0;
+    animation.currentTime = Math.max(0, current + directionStep * jump);
+  }
+
+  if (prev) prev.addEventListener('click', () => nudgeMarquee(-1));
+  if (next) next.addEventListener('click', () => nudgeMarquee(1));
+
   window.addEventListener('resize', () => {
     window.clearTimeout(resizeTimer);
-    resizeTimer = window.setTimeout(buildPages, 160);
+    resizeTimer = window.setTimeout(arrangeCards, 180);
   });
 
-  buildPages();
+  arrangeCards();
 })();
 </script>
+
+
+
+<style id="crystal-feature-review-image-centered">
+/* Center the featured Google Reviews panel within the full left-hand column. */
+@media (min-width: 901px) {
+  #reviews .reviews-layout {
+    align-items: center !important;
+  }
+  #reviews .reviews-feature {
+    position: static !important;
+    justify-self: center !important;
+    align-self: center !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+  #reviews .reviews-feature img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    transform: none !important;
+  }
+}
+@media (max-width: 900px) {
+  #reviews .reviews-feature {
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto 24px !important;
+  }
+  #reviews .reviews-feature img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+</style>
 
 </body>
 </html>
