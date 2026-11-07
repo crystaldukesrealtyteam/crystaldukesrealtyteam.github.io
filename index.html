@@ -8617,7 +8617,7 @@ footer .footer-grid > div:nth-child(3) h4 {
     // Fill each visual column with its top and bottom review, preserving
     // the familiar 3-column x 2-row presentation.
     const ordered = [];
-    for ( (let i = 0; i < cards.length; i += 6) ) {
+    for (let i = 0; i < cards.length; i += 6) {
       const group = cards.slice(i, i + 6);
       if (group.length <= 3) {
         ordered.push(...group);
